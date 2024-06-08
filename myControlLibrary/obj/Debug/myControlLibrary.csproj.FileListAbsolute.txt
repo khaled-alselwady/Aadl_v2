@@ -1,0 +1,16 @@
+C:\Users\XIGMATEK\source\repos\AADL\myControlLibrary\bin\Debug\myControlLibrary.dll
+C:\Users\XIGMATEK\source\repos\AADL\myControlLibrary\bin\Debug\myControlLibrary.pdb
+C:\Users\XIGMATEK\source\repos\AADL\myControlLibrary\obj\Debug\myControlLibrary.csproj.AssemblyReference.cache
+C:\Users\XIGMATEK\source\repos\AADL\myControlLibrary\obj\Debug\myControlLibrary.myCustomMessageBoxFrm.resources
+C:\Users\XIGMATEK\source\repos\AADL\myControlLibrary\obj\Debug\myControlLibrary.csproj.GenerateResource.cache
+C:\Users\XIGMATEK\source\repos\AADL\myControlLibrary\obj\Debug\myControlLibrary.csproj.CoreCompileInputs.cache
+C:\Users\XIGMATEK\source\repos\AADL\myControlLibrary\obj\Debug\myControlLibrary.dll
+C:\Users\XIGMATEK\source\repos\AADL\myControlLibrary\obj\Debug\myControlLibrary.pdb
+C:\Users\XIGMATEK\source\repos\AADL\My-Github\Aadl_v1\Aadl_v1\myControlLibrary\bin\Debug\myControlLibrary.dll
+C:\Users\XIGMATEK\source\repos\AADL\My-Github\Aadl_v1\Aadl_v1\myControlLibrary\bin\Debug\myControlLibrary.pdb
+C:\Users\XIGMATEK\source\repos\AADL\My-Github\Aadl_v1\Aadl_v1\myControlLibrary\obj\Debug\myControlLibrary.csproj.AssemblyReference.cache
+C:\Users\XIGMATEK\source\repos\AADL\My-Github\Aadl_v1\Aadl_v1\myControlLibrary\obj\Debug\myControlLibrary.myCustomMessageBoxFrm.resources
+C:\Users\XIGMATEK\source\repos\AADL\My-Github\Aadl_v1\Aadl_v1\myControlLibrary\obj\Debug\myControlLibrary.csproj.GenerateResource.cache
+C:\Users\XIGMATEK\source\repos\AADL\My-Github\Aadl_v1\Aadl_v1\myControlLibrary\obj\Debug\myControlLibrary.csproj.CoreCompileInputs.cache
+C:\Users\XIGMATEK\source\repos\AADL\My-Github\Aadl_v1\Aadl_v1\myControlLibrary\obj\Debug\myControlLibrary.dll
+C:\Users\XIGMATEK\source\repos\AADL\My-Github\Aadl_v1\Aadl_v1\myControlLibrary\obj\Debug\myControlLibrary.pdb

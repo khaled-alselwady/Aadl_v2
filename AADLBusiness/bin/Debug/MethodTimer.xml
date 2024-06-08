@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MethodTimer</name>
+    </assembly>
+    <members>
+        <member name="T:MethodTimer.TimeAttribute">
+            <summary>
+            Used to flag items as requiring timing.
+            </summary>
+        </member>
+    </members>
+</doc>
