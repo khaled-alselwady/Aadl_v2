@@ -2,6 +2,7 @@
 using AADLBusiness.Lists.Closed;
 using AADLBusiness.Lists.WhiteList;
 using AADLDataAccess;
+using AADLDataAccess.Expert;
 using AADLDataAccess.Sharia;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static AADLBusiness.Expert.clsExpert;
 
 namespace AADLBusiness.Sharia
 {
@@ -327,12 +329,24 @@ namespace AADLBusiness.Sharia
         {
             return await clsShariaData.GetAllShariasAsync();
         }
-        [Obsolete("Not implemented well , don't use it.")]
-        public static bool DeleteSharia(int ShariaID)
+        private static bool _DeletePermanently(int? ShariaID)
+        => clsShariaData.DeletePermanently(ShariaID);
+        private static bool _DeleteSoftly(int? ShariaID)
+               => clsShariaData.DeleteSoftly(ShariaID);
+        public static bool Delete(int? ShariaID, enDeleteMode mode)
         {
-            return clsShariaData.DeleteSharia(ShariaID);
-        }
+            switch (mode)
+            {
+                case enDeleteMode.Permanently:
+                    return _DeletePermanently(ShariaID);
 
+                case enDeleteMode.Softly:
+                    return _DeleteSoftly(ShariaID);
+
+                default:
+                    return false;
+            }
+        }
         public static bool IsShariaExist<T>(T Value, enSearchBy CheckBy)
         {
             switch (CheckBy)
@@ -397,14 +411,6 @@ namespace AADLBusiness.Sharia
             return false;
 
         }
-
-        public static bool UpdateRegulatorList(int RegulatorID, int ListID, clsList.enListType listType)
-        {
-
-            return clsRegulatorData.UpdateRegulatorList(RegulatorID, ListID, (int)listType);
-
-        }
-
         public  bool IsShariaInWhiteList()
         {
             return clsWhiteList.IsPractitionerInWhiteList(this.PractitionerID, enPractitionerType.Sharia);
@@ -413,7 +419,7 @@ namespace AADLBusiness.Sharia
         {
             return clsClosedList.IsPractitionerInClosedList(this.PractitionerID, enPractitionerType.Sharia);
         }
-   
 
     }
+
 }

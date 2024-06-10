@@ -57,6 +57,7 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.ctbRegulatoryMemberShipNumber = new myControlLibrary.myCustomControlTextBox();
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
+            this.ctrlPersonCardWithFilter1 = new AADL.People.controls.ctrlPersonCardWithFilter();
             this.btnPersonInfoNext = new System.Windows.Forms.Button();
             this.tcPractitionernfo = new System.Windows.Forms.TabControl();
             this.tpShariaInfo = new System.Windows.Forms.TabPage();
@@ -93,7 +94,27 @@
             this.cbAddExpert = new System.Windows.Forms.CheckBox();
             this.cbAddJudger = new System.Windows.Forms.CheckBox();
             this.cbAddRegulator = new System.Windows.Forms.CheckBox();
-            this.ctrlPersonCardWithFilter1 = new AADL.People.controls.ctrlPersonCardWithFilter();
+            this.tpJudgerInfo = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rbtnJScholarship = new System.Windows.Forms.RadioButton();
+            this.rbtnJSpecialSupport = new System.Windows.Forms.RadioButton();
+            this.rbtnJudgerSpecial = new System.Windows.Forms.RadioButton();
+            this.rbtnJudgerMedium = new System.Windows.Forms.RadioButton();
+            this.rbtnJudgerFree = new System.Windows.Forms.RadioButton();
+            this.btnJudgerClosedList = new System.Windows.Forms.Button();
+            this.btnJudgerWhite = new System.Windows.Forms.Button();
+            this.btnBlackListJudger = new System.Windows.Forms.Button();
+            this.btnResetJudgerCases = new System.Windows.Forms.Button();
+            this.lbJudgerCasesRecord = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.clbJudgerCasesTypes = new System.Windows.Forms.CheckedListBox();
+            this.chkJudgerIsActive = new System.Windows.Forms.CheckBox();
+            this.lblJudgerID = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.tpRegulatorInfo.SuspendLayout();
             this.gpRegulatorySubscriptionType.SuspendLayout();
             this.gpSubscriptionWay.SuspendLayout();
@@ -110,6 +131,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.gbAdditionType.SuspendLayout();
+            this.tpJudgerInfo.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // tpRegulatorInfo
@@ -457,6 +483,17 @@
             this.tpPersonalInfo.TabIndex = 0;
             this.tpPersonalInfo.Text = "البيانات الشخصية";
             // 
+            // ctrlPersonCardWithFilter1
+            // 
+            this.ctrlPersonCardWithFilter1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ctrlPersonCardWithFilter1.FilterEnabled = true;
+            this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(163, 21);
+            this.ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
+            this.ctrlPersonCardWithFilter1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ctrlPersonCardWithFilter1.ShowAddPerson = true;
+            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(1067, 725);
+            this.ctrlPersonCardWithFilter1.TabIndex = 120;
+            // 
             // btnPersonInfoNext
             // 
             this.btnPersonInfoNext.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -475,6 +512,7 @@
             this.tcPractitionernfo.Controls.Add(this.tpPersonalInfo);
             this.tcPractitionernfo.Controls.Add(this.tpRegulatorInfo);
             this.tcPractitionernfo.Controls.Add(this.tpShariaInfo);
+            this.tcPractitionernfo.Controls.Add(this.tpJudgerInfo);
             this.tcPractitionernfo.Location = new System.Drawing.Point(74, 162);
             this.tcPractitionernfo.Name = "tcPractitionernfo";
             this.tcPractitionernfo.RightToLeftLayout = true;
@@ -900,16 +938,258 @@
             this.cbAddRegulator.UseVisualStyleBackColor = true;
             this.cbAddRegulator.CheckedChanged += new System.EventHandler(this.cbAdd_CheckedChanged);
             // 
-            // ctrlPersonCardWithFilter1
+            // tpJudgerInfo
             // 
-            this.ctrlPersonCardWithFilter1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ctrlPersonCardWithFilter1.FilterEnabled = true;
-            this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(163, 21);
-            this.ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
-            this.ctrlPersonCardWithFilter1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ctrlPersonCardWithFilter1.ShowAddPerson = true;
-            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(1067, 725);
-            this.ctrlPersonCardWithFilter1.TabIndex = 120;
+            this.tpJudgerInfo.Controls.Add(this.groupBox2);
+            this.tpJudgerInfo.Controls.Add(this.btnJudgerClosedList);
+            this.tpJudgerInfo.Controls.Add(this.btnJudgerWhite);
+            this.tpJudgerInfo.Controls.Add(this.btnBlackListJudger);
+            this.tpJudgerInfo.Controls.Add(this.btnResetJudgerCases);
+            this.tpJudgerInfo.Controls.Add(this.lbJudgerCasesRecord);
+            this.tpJudgerInfo.Controls.Add(this.label8);
+            this.tpJudgerInfo.Controls.Add(this.clbJudgerCasesTypes);
+            this.tpJudgerInfo.Controls.Add(this.chkJudgerIsActive);
+            this.tpJudgerInfo.Controls.Add(this.lblJudgerID);
+            this.tpJudgerInfo.Controls.Add(this.pictureBox6);
+            this.tpJudgerInfo.Controls.Add(this.label12);
+            this.tpJudgerInfo.Controls.Add(this.label14);
+            this.tpJudgerInfo.Controls.Add(this.pictureBox7);
+            this.tpJudgerInfo.Location = new System.Drawing.Point(4, 22);
+            this.tpJudgerInfo.Name = "tpJudgerInfo";
+            this.tpJudgerInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tpJudgerInfo.Size = new System.Drawing.Size(1236, 744);
+            this.tpJudgerInfo.TabIndex = 3;
+            this.tpJudgerInfo.Text = "محكم";
+            this.tpJudgerInfo.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.groupBox3);
+            this.groupBox2.Controls.Add(this.rbtnJudgerSpecial);
+            this.groupBox2.Controls.Add(this.rbtnJudgerMedium);
+            this.groupBox2.Controls.Add(this.rbtnJudgerFree);
+            this.groupBox2.Location = new System.Drawing.Point(73, 41);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 173);
+            this.groupBox2.TabIndex = 175;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "نوع الاشتراك";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.rbtnJScholarship);
+            this.groupBox3.Controls.Add(this.rbtnJSpecialSupport);
+            this.groupBox3.Location = new System.Drawing.Point(6, 104);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(188, 60);
+            this.groupBox3.TabIndex = 135;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "طريقة الاشتراك";
+            // 
+            // rbtnJScholarship
+            // 
+            this.rbtnJScholarship.AutoSize = true;
+            this.rbtnJScholarship.Location = new System.Drawing.Point(6, 37);
+            this.rbtnJScholarship.Name = "rbtnJScholarship";
+            this.rbtnJScholarship.Size = new System.Drawing.Size(46, 17);
+            this.rbtnJScholarship.TabIndex = 2;
+            this.rbtnJScholarship.Tag = "2";
+            this.rbtnJScholarship.Text = "منحة";
+            this.rbtnJScholarship.UseVisualStyleBackColor = true;
+            // 
+            // rbtnJSpecialSupport
+            // 
+            this.rbtnJSpecialSupport.AutoSize = true;
+            this.rbtnJSpecialSupport.Location = new System.Drawing.Point(115, 37);
+            this.rbtnJSpecialSupport.Name = "rbtnJSpecialSupport";
+            this.rbtnJSpecialSupport.Size = new System.Drawing.Size(67, 17);
+            this.rbtnJSpecialSupport.TabIndex = 3;
+            this.rbtnJSpecialSupport.Tag = "1";
+            this.rbtnJSpecialSupport.Text = "دعم خاص";
+            this.rbtnJSpecialSupport.UseVisualStyleBackColor = true;
+            // 
+            // rbtnJudgerSpecial
+            // 
+            this.rbtnJudgerSpecial.AutoSize = true;
+            this.rbtnJudgerSpecial.Location = new System.Drawing.Point(6, 29);
+            this.rbtnJudgerSpecial.Name = "rbtnJudgerSpecial";
+            this.rbtnJudgerSpecial.Size = new System.Drawing.Size(44, 17);
+            this.rbtnJudgerSpecial.TabIndex = 2;
+            this.rbtnJudgerSpecial.Tag = "3";
+            this.rbtnJudgerSpecial.Text = "مميز";
+            this.rbtnJudgerSpecial.UseVisualStyleBackColor = true;
+            // 
+            // rbtnJudgerMedium
+            // 
+            this.rbtnJudgerMedium.AutoSize = true;
+            this.rbtnJudgerMedium.Location = new System.Drawing.Point(139, 77);
+            this.rbtnJudgerMedium.Name = "rbtnJudgerMedium";
+            this.rbtnJudgerMedium.Size = new System.Drawing.Size(56, 17);
+            this.rbtnJudgerMedium.TabIndex = 1;
+            this.rbtnJudgerMedium.Tag = "2";
+            this.rbtnJudgerMedium.Text = "متوسط";
+            this.rbtnJudgerMedium.UseVisualStyleBackColor = true;
+            // 
+            // rbtnJudgerFree
+            // 
+            this.rbtnJudgerFree.AutoSize = true;
+            this.rbtnJudgerFree.Location = new System.Drawing.Point(139, 29);
+            this.rbtnJudgerFree.Name = "rbtnJudgerFree";
+            this.rbtnJudgerFree.Size = new System.Drawing.Size(55, 17);
+            this.rbtnJudgerFree.TabIndex = 0;
+            this.rbtnJudgerFree.Tag = "1";
+            this.rbtnJudgerFree.Text = "مجاني";
+            this.rbtnJudgerFree.UseVisualStyleBackColor = true;
+            // 
+            // btnJudgerClosedList
+            // 
+            this.btnJudgerClosedList.BackColor = System.Drawing.Color.Transparent;
+            this.btnJudgerClosedList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJudgerClosedList.ForeColor = System.Drawing.Color.Red;
+            this.btnJudgerClosedList.Location = new System.Drawing.Point(400, 515);
+            this.btnJudgerClosedList.Name = "btnJudgerClosedList";
+            this.btnJudgerClosedList.Size = new System.Drawing.Size(141, 47);
+            this.btnJudgerClosedList.TabIndex = 174;
+            this.btnJudgerClosedList.Text = "اضافة الى القائمة المغلقة";
+            this.btnJudgerClosedList.UseVisualStyleBackColor = false;
+            // 
+            // btnJudgerWhite
+            // 
+            this.btnJudgerWhite.BackColor = System.Drawing.Color.Transparent;
+            this.btnJudgerWhite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJudgerWhite.ForeColor = System.Drawing.Color.Red;
+            this.btnJudgerWhite.Location = new System.Drawing.Point(590, 515);
+            this.btnJudgerWhite.Name = "btnJudgerWhite";
+            this.btnJudgerWhite.Size = new System.Drawing.Size(141, 47);
+            this.btnJudgerWhite.TabIndex = 173;
+            this.btnJudgerWhite.Text = "اضافة الى القائمة البيضاء";
+            this.btnJudgerWhite.UseVisualStyleBackColor = false;
+            // 
+            // btnBlackListJudger
+            // 
+            this.btnBlackListJudger.BackColor = System.Drawing.Color.Transparent;
+            this.btnBlackListJudger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBlackListJudger.ForeColor = System.Drawing.Color.Red;
+            this.btnBlackListJudger.Location = new System.Drawing.Point(772, 515);
+            this.btnBlackListJudger.Name = "btnBlackListJudger";
+            this.btnBlackListJudger.Size = new System.Drawing.Size(141, 47);
+            this.btnBlackListJudger.TabIndex = 172;
+            this.btnBlackListJudger.Text = "اضافة الى القائمة السوداء";
+            this.btnBlackListJudger.UseVisualStyleBackColor = false;
+            // 
+            // btnResetJudgerCases
+            // 
+            this.btnResetJudgerCases.BackColor = System.Drawing.Color.Transparent;
+            this.btnResetJudgerCases.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetJudgerCases.ForeColor = System.Drawing.Color.Red;
+            this.btnResetJudgerCases.Location = new System.Drawing.Point(961, 440);
+            this.btnResetJudgerCases.Name = "btnResetJudgerCases";
+            this.btnResetJudgerCases.Size = new System.Drawing.Size(64, 28);
+            this.btnResetJudgerCases.TabIndex = 171;
+            this.btnResetJudgerCases.Text = "اعادة";
+            this.btnResetJudgerCases.UseVisualStyleBackColor = false;
+            // 
+            // lbJudgerCasesRecord
+            // 
+            this.lbJudgerCasesRecord.AutoSize = true;
+            this.lbJudgerCasesRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbJudgerCasesRecord.Location = new System.Drawing.Point(934, 490);
+            this.lbJudgerCasesRecord.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbJudgerCasesRecord.Name = "lbJudgerCasesRecord";
+            this.lbJudgerCasesRecord.Size = new System.Drawing.Size(19, 20);
+            this.lbJudgerCasesRecord.TabIndex = 170;
+            this.lbJudgerCasesRecord.Text = "0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(961, 490);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(85, 20);
+            this.label8.TabIndex = 169;
+            this.label8.Text = "عدد القضايا:";
+            // 
+            // clbJudgerCasesTypes
+            // 
+            this.clbJudgerCasesTypes.CheckOnClick = true;
+            this.clbJudgerCasesTypes.ContextMenuStrip = this.cms;
+            this.clbJudgerCasesTypes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clbJudgerCasesTypes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clbJudgerCasesTypes.ForeColor = System.Drawing.Color.Red;
+            this.clbJudgerCasesTypes.FormattingEnabled = true;
+            this.clbJudgerCasesTypes.Location = new System.Drawing.Point(401, 103);
+            this.clbJudgerCasesTypes.Name = "clbJudgerCasesTypes";
+            this.clbJudgerCasesTypes.Size = new System.Drawing.Size(513, 365);
+            this.clbJudgerCasesTypes.TabIndex = 166;
+            // 
+            // chkJudgerIsActive
+            // 
+            this.chkJudgerIsActive.AutoSize = true;
+            this.chkJudgerIsActive.Checked = true;
+            this.chkJudgerIsActive.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkJudgerIsActive.ForeColor = System.Drawing.Color.Red;
+            this.chkJudgerIsActive.Location = new System.Drawing.Point(864, 474);
+            this.chkJudgerIsActive.Name = "chkJudgerIsActive";
+            this.chkJudgerIsActive.Size = new System.Drawing.Size(49, 17);
+            this.chkJudgerIsActive.TabIndex = 167;
+            this.chkJudgerIsActive.Text = "فعال";
+            this.chkJudgerIsActive.UseVisualStyleBackColor = true;
+            // 
+            // lblJudgerID
+            // 
+            this.lblJudgerID.AutoSize = true;
+            this.lblJudgerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJudgerID.ForeColor = System.Drawing.Color.Red;
+            this.lblJudgerID.Location = new System.Drawing.Point(878, 41);
+            this.lblJudgerID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblJudgerID.Name = "lblJudgerID";
+            this.lblJudgerID.Size = new System.Drawing.Size(39, 20);
+            this.lblJudgerID.TabIndex = 165;
+            this.lblJudgerID.Text = "???";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::AADL.Properties.Resources.List_32;
+            this.pictureBox6.Location = new System.Drawing.Point(997, 103);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(31, 26);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 164;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(1116, 37);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(99, 20);
+            this.label12.TabIndex = 162;
+            this.label12.Text = "الرقم التعريفي:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(1116, 103);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(97, 20);
+            this.label14.TabIndex = 160;
+            this.label14.Text = "انواع القضايا:";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::AADL.Properties.Resources.PersonDetails_32;
+            this.pictureBox7.Location = new System.Drawing.Point(997, 41);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(31, 26);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 163;
+            this.pictureBox7.TabStop = false;
             // 
             // frmAddUpdatePractitioner
             // 
@@ -954,6 +1234,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.gbAdditionType.ResumeLayout(false);
             this.gbAdditionType.PerformLayout();
+            this.tpJudgerInfo.ResumeLayout(false);
+            this.tpJudgerInfo.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1026,5 +1314,26 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbtnSScholarship;
         private System.Windows.Forms.RadioButton rbtnSSpecialSupport;
+        private System.Windows.Forms.TabPage tpJudgerInfo;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton rbtnJScholarship;
+        private System.Windows.Forms.RadioButton rbtnJSpecialSupport;
+        private System.Windows.Forms.RadioButton rbtnJudgerSpecial;
+        private System.Windows.Forms.RadioButton rbtnJudgerMedium;
+        private System.Windows.Forms.RadioButton rbtnJudgerFree;
+        private System.Windows.Forms.Button btnJudgerClosedList;
+        private System.Windows.Forms.Button btnJudgerWhite;
+        private System.Windows.Forms.Button btnBlackListJudger;
+        private System.Windows.Forms.Button btnResetJudgerCases;
+        private System.Windows.Forms.Label lbJudgerCasesRecord;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.CheckedListBox clbJudgerCasesTypes;
+        private System.Windows.Forms.CheckBox chkJudgerIsActive;
+        private System.Windows.Forms.Label lblJudgerID;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

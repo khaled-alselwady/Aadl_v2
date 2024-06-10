@@ -13,7 +13,7 @@ namespace AADL_DataAccess.HelperClasses
             // Create the event source if it does not exist
             if (!EventLog.SourceExists(sourceName))
             {
-                EventLog.CreateEventSource(sourceName, "Application");
+                EventLog.CreateEventSource(sourceName, "ADDLApplication");
             }
 
             string errorMessage = $"{errorType} in {ex.Source}\\n\\nException Message: {ex.Message}\\n\\nException Type: {ex.GetType().Name}\\n\\nStack Trace: {ex.StackTrace}\\n\\nException Location: {ex.TargetSite}";

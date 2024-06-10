@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AADL_DataAccess.HelperClasses;
 
 namespace AADLDataAccess.Sharia
 {
@@ -284,43 +285,12 @@ namespace AADLDataAccess.Sharia
 
         }
 
-        [Obsolete("Not Implemented yet.")]
+        public static bool DeletePermanently(int? ShariaID)
+           => clsDataAccessHelper.Delete("SP_DeleteShariaPermanently", "ShariaID", ShariaID);
 
-        /// <summary>
-        /// Able to handle deleting process for both regulator info , and its cases pratices.
-        /// </summary>
-        /// <param name="RegulatorID"></param>
-        /// <returns></returns>
-        public static bool DeleteSharia(int ShariaID)
-        {
+        public static bool DeleteSoftly(int? ShariaID)
+        => clsDataAccessHelper.Delete("SP_DeleteShariaSoftly", "ShariaID", ShariaID);
 
-            int rowsAffected = 0;
-
-            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
-            {
-
-                using (SqlCommand command = new SqlCommand("SP_DeleteShariaID_NOTYET", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@ShariaID", ShariaID);
-
-                    try
-                    {
-                        connection.Open();
-                        rowsAffected = command.ExecuteNonQuery();
-
-                    }
-                    catch (Exception ex)
-                    {
-                        clsDataAccessSettings.WriteEventToLogFile("Problem happened in regulator class while trying to delete regulator by his ID()\n" + ex.Message,
-                            EventLogEntryType.Error);
-                    }
-                }
-            }
-
-            return (rowsAffected > 0);
-
-        }
         public static bool IsShariaExistByPersonID(int PersonID)
         {
             bool isFound = false;

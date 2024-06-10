@@ -18,6 +18,8 @@ using System.ComponentModel.Design;
 using AADLBusiness.Lists.WhiteList;
 using AADLDataAccess.Lists.White;
 using AADLBusiness.Lists.Closed;
+using AADLDataAccess.Expert;
+using static AADLBusiness.Expert.clsExpert;
 
 namespace AADLBusiness
 {
@@ -195,8 +197,8 @@ namespace AADLBusiness
                                           LastEditDate, LastEditByUserID,  CreatedByUserID,  IsActive,
                                           RegulatorCasesPracticeIDNameDictionary);
 
-            return null;
-
+            throw new ArgumentNullException("No entity for \'Regulator\' was found in database that carry or fit with your input.");
+            
         }
         public override bool Save()
         {
@@ -255,11 +257,28 @@ namespace AADLBusiness
         {
             return  clsRegulatorData.GetAllRegulators();
         }
- 
-        public static bool DeleteRegulator(int RegulatorID)
+
+        private static bool _DeletePermanently(int? RegulatorID)
+     => clsRegulatorData.DeletePermanently(RegulatorID);
+
+        private static bool _DeleteSoftly(int? RegulatorID)
+               => clsRegulatorData.DeleteSoftly(RegulatorID);
+
+        public static bool Delete(int? RegulatorID, enDeleteMode mode)
         {
-            return clsRegulatorData.DeleteRegulator(RegulatorID);
+            switch (mode)
+            {
+                case enDeleteMode.Permanently:
+                    return _DeletePermanently(RegulatorID);
+
+                case enDeleteMode.Softly:
+                    return _DeleteSoftly(RegulatorID);
+
+                default:
+                    return false;
+            }
         }
+
 
         public static bool IsRegulatorExist<T>(T Value, enSearchBy CheckBy)
         {

@@ -1,4 +1,5 @@
 ﻿using AADL_DataAccess;
+using AADL_DataAccess.HelperClasses;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -613,36 +614,12 @@ namespace AADLDataAccess
         /// </summary>
         /// <param name="RegulatorID"></param>
         /// <returns>Weather it was deleted successfully or not.</returns>
-        public static bool DeleteRegulator(int RegulatorID)
-        {
+        public static bool DeletePermanently(int? RegulatorID)
+               => clsDataAccessHelper.Delete("SP_DeleteRegulatorPermanently", "RegulatorID", RegulatorID);
 
-            int rowsAffected = 0;
-
-            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
-            {
-
-                using (SqlCommand command = new SqlCommand("SP_DeleteRegulator", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@RegulatorID", RegulatorID);
-
-                    try
-                    {
-                        connection.Open();
-                        rowsAffected = command.ExecuteNonQuery();
-
-                    }
-                    catch (Exception ex)
-                    {
-                        clsDataAccessSettings.WriteEventToLogFile("Problem happened in regulator class while trying to delete regulator by his ID()\n"+ex.Message,
-                            EventLogEntryType.Error);
-                    }
-                }
-            }
-
-            return (rowsAffected > 0);
-
-        }
+        public static bool DeleteSoftly(int? RegulatorID)
+        => clsDataAccessHelper.Delete("SP_DeleteRegulatorSoftly", "RegulatorID", RegulatorID); 
+        
         public static bool IsRegulatorExistByPersonID(int PersonID)
         {
             bool isFound = false;
