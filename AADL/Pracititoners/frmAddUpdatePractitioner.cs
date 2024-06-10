@@ -1,7 +1,7 @@
 ﻿using AADL.GlobalClasses;
 using AADL.Lists;
 using AADLBusiness;
-using AADLBusiness;
+using AADLBusiness.Expert;
 using AADLBusiness.Judger;
 using AADLBusiness.Lists.Closed;
 using AADLBusiness.Lists.WhiteList;
@@ -38,6 +38,7 @@ namespace AADL.Regulators
         private enum enSubscriptionType { Free=1,Medium=2,Special=3};
         private enum enSubscriptionWay{ SpecialSupport=1, scholarship = 2};
 
+        public enum enRunSpecificTabPage { Regulatory,Sharia,Expert,Judger};
         public enum enMode { AddNew = 0, Update = 1 }
     
 
@@ -93,6 +94,56 @@ namespace AADL.Regulators
             _PractitionerID = practitionerID;
             ctrlPersonCardWithFilter1.OnPersonComplete += CheckItOut;
         }
+        public frmAddUpdatePractitioner(int practitionerID,enRunSpecificTabPage RunSpecificTab)
+        {
+            InitializeComponent();
+            _Mode = enMode.Update;
+            _PractitionerID = practitionerID;
+            ctrlPersonCardWithFilter1.OnPersonComplete += CheckItOut;
+            MoveTabPage(RunSpecificTab);
+        }
+        private void MoveTabPage(enRunSpecificTabPage TabPage)
+        {
+
+            switch (TabPage)
+            {
+                case enRunSpecificTabPage.Regulatory:
+                    {
+            
+                        tcPractitionernfo.SelectedTab = tpRegulatorInfo;
+                        cbAddRegulator.Checked = true;
+                        break;
+                    }
+                case enRunSpecificTabPage.Sharia:
+                    {
+
+                        tcPractitionernfo.SelectedTab = tpShariaInfo;
+                        cbAddSharia.Checked = true;
+
+                        break;
+
+                    }
+                case enRunSpecificTabPage.Judger:
+                    {
+
+                        tcPractitionernfo.SelectedTab = tpJudgerInfo;
+                        cbAddJudger.Checked = true;
+                        break;
+
+                    }
+                case enRunSpecificTabPage.Expert:
+                    {
+
+                        tcPractitionernfo.SelectedTab = tpExpertInfo;
+                        cbAddExpert.Checked = true;
+                        break;
+
+                    }
+            }
+
+
+        }
+
         [Time]
         private void _loadRegulatoryCasesTypes()
         {
@@ -191,7 +242,6 @@ namespace AADL.Regulators
             }
 
         }
-
         private void _loadRegulatorInfoData()
         {
             try
@@ -1071,7 +1121,8 @@ namespace AADL.Regulators
                             };
                         }
                     }
-                } catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
 
                     clsGlobal.WriteEventToLogFile("Exception happen in Add/update practitioner while validting the member ship of regulator " +
@@ -1080,7 +1131,6 @@ namespace AADL.Regulators
                 }
 
             }
-
         }
         private void btnRegulatorInfoNext_Click(object sender, EventArgs e)
         {
@@ -1122,9 +1172,6 @@ namespace AADL.Regulators
                 tpRegulatorInfo.Enabled = true;
                 tcPractitionernfo.SelectedTab = tpRegulatorInfo;
             }
-
-
-            
 
         }
 
@@ -1232,10 +1279,22 @@ namespace AADL.Regulators
         [Obsolete("This condition ain't used anymore")]
         private void clbRegulatoryCasesTypes_Validating(object sender, CancelEventArgs e)
         {
-            if (clbRegulatoryCasesTypes.CheckedItems.Count == 0)
+            if (rbtnRegulatoryFree.Checked && clbRegulatoryCasesTypes.CheckedItems.Count > 1)
             {
 
-                errorProvider1.SetError(clbRegulatoryCasesTypes, "يجب اختيار قضية واحدة على الاقل.");
+                errorProvider1.SetError(clbRegulatoryCasesTypes, "لقد تجاوزت الحد المسموح من القضايا لهذا الاشتراك.");
+                e.Cancel = true;
+            }
+            else if (rbtnRegulatoryMedium.Checked && clbRegulatoryCasesTypes.CheckedItems.Count > 3)
+            {
+
+                errorProvider1.SetError(clbRegulatoryCasesTypes, "لقد تجاوزت الحد المسموح من القضايا لهذا الاشتراك.");
+                e.Cancel = true;
+            }
+            else if (rbtnRegulatorySpecial.Checked && clbRegulatoryCasesTypes.CheckedItems.Count > 5)
+            {
+
+                errorProvider1.SetError(clbRegulatoryCasesTypes, "لقد تجاوزت الحد المسموح من القضايا لهذا الاشتراك.");
                 e.Cancel = true;
             }
             else
@@ -1329,45 +1388,6 @@ namespace AADL.Regulators
         {
 
         }
-
-        private void btnToShariaNext_Click(object sender, EventArgs e)
-        {
-            if (_Mode == enMode.Update)
-            {
-                btnSave.Enabled = true;
-                tpShariaInfo.Enabled = true;
-                tcPractitionernfo.SelectedTab = tpShariaInfo;
-                return;
-            }
-
-            //in case of add new mode.
-            if (ctrlPersonCardWithFilter1.PersonID != null)
-            {
-
-                if (clsSharia.IsShariaExist(ctrlPersonCardWithFilter1.PersonID,
-                    clsSharia.enSearchBy.PersonID))
-                {
-                    MessageBox.Show("الشخص المحدد لديه ملف محامي(شرعي) بالفعل، يرجى اختيار شخص آخر", "اختار شخص اخر", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    ctrlPersonCardWithFilter1.FilterFocus();
-                }
-
-                else
-                {
-                    btnSave.Enabled = true;
-                    tpShariaInfo.Enabled = true;
-                    tcPractitionernfo.SelectedTab = tpShariaInfo;
-                }
-
-            }
-
-            else
-            {
-                MessageBox.Show("يرجى اختيار شخص ما.", "اختار شخص ما", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                ctrlPersonCardWithFilter1.FilterFocus();
-
-            }
-        }
-
         private void btnResetShariaCases_Click(object sender, EventArgs e)
         {
             // Iterate through each item in the CheckedListBox
@@ -1379,55 +1399,6 @@ namespace AADL.Regulators
 
             lbShariaCasesRecord.Text = clbShariaCasesTypes.CheckedItems.Count.ToString();
         }
-
-        private void btnToRegulatorPrevious_Click(object sender, EventArgs e)
-        {
-            if (ctrlPersonCardWithFilter1.PersonID == null)
-            {
-                MessageBox.Show("يرجى اختيار شخص ما.", "اختار شخص ما", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                ctrlPersonCardWithFilter1.FilterFocus();
-                return;
-            }
-            if (_RegulatorMode == enMode.AddNew &&
-                 clsRegulator.IsRegulatorExist(ctrlPersonCardWithFilter1.PersonID,
-                     clsRegulator.enSearchBy.PersonID))
-            {
-
-                MessageBox.Show("الشخص المحدد لديه ملف محامي(نظامي) بالفعل، يرجى اختيار شخص آخر", "اختار شخص اخر", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                ctrlPersonCardWithFilter1.FilterFocus();
-                return;
-            }
-
-
-            else if (cbAddRegulator.Checked == false)
-            {
-                tcPractitionernfo.SelectedTab = tpRegulatorInfo;
-                return;
-            }
-
-            else if (_RegulatorMode == enMode.Update)
-            {
-
-                btnSave.Enabled = true;
-                tpRegulatorInfo.Enabled = true;
-                tcPractitionernfo.SelectedTab = tpRegulatorInfo;
-            }
-
-            else
-            {
-                btnSave.Enabled = true;
-                tpRegulatorInfo.Enabled = true;
-                tcPractitionernfo.SelectedTab = tpRegulatorInfo;
-            }
-
-        }
-
-        private void btnToPersonalPrevious_Click_1(object sender, EventArgs e)
-        {
-            tcPractitionernfo.SelectedTab = tpPersonalInfo;
-
-        }
-
         private void clbShariaCasesTypes_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbShariaCasesRecord.Text = clbShariaCasesTypes.CheckedItems.Count.ToString();
@@ -1519,26 +1490,78 @@ namespace AADL.Regulators
 
         private void _UpdateSaveButton(object sender, EventArgs e)
         {
-            if(ctrlPersonCardWithFilter1.PersonID!=null&& cbAddExpert.Checked ||
-               ctrlPersonCardWithFilter1.PersonID != null && cbAddJudger.Checked ||
-               ctrlPersonCardWithFilter1.PersonID != null && cbAddRegulator.Checked ||
-               ctrlPersonCardWithFilter1.PersonID != null && cbAddSharia.Checked)
-            {
+            btnSave.Enabled = (tpRegulatorInfo.Enabled || tpShariaInfo.Enabled || tpJudgerInfo.Enabled || tpExpertInfo.Enabled);
 
-            btnSave.Enabled = true;
-            }
-            else
-            { btnSave.Enabled = false; }
         }
         private void _UpdateTabs(object sender ,EventArgs e)
         {
-            tpShariaInfo.Enabled = cbAddSharia.Checked && ctrlPersonCardWithFilter1.SelectedPersonInfo != null&&
-                               !clsSharia.IsShariaExist(ctrlPersonCardWithFilter1.PersonID, clsSharia.enSearchBy.PersonID);
+            if(sender is CheckBox checkbox)
+            {
+                if (checkbox.Tag.ToString() == "1")//Regulatory
+                {
+                      tpRegulatorInfo.Enabled = (
+                        cbAddRegulator.Checked && ctrlPersonCardWithFilter1.SelectedPersonInfo != null
+                       && _RegulatorMode == enMode.Update &&
+                       clsRegulator.IsRegulatorExist(ctrlPersonCardWithFilter1.PersonID, clsRegulator.enSearchBy.PersonID)
+                       ) 
+                       ||
+                       (
+                       cbAddRegulator.Checked && ctrlPersonCardWithFilter1.SelectedPersonInfo != null
+                       && _RegulatorMode == enMode.AddNew &&
+                       !clsRegulator.IsRegulatorExist(ctrlPersonCardWithFilter1.PersonID, clsRegulator.enSearchBy.PersonID)
+                       );
 
-            tpRegulatorInfo.Enabled = cbAddRegulator.Checked && ctrlPersonCardWithFilter1.SelectedPersonInfo != null&&
-                !clsRegulator.IsRegulatorExist(ctrlPersonCardWithFilter1.PersonID,clsRegulator.enSearchBy.PersonID);
-            //.Enabled = SASA.Checked;
-            //  SASA.Enabled = S.Checked;
+                }
+
+                else if (checkbox.Tag.ToString() == "2")//Sharia
+                {
+                    tpShariaInfo.Enabled = (
+                      cbAddSharia.Checked && ctrlPersonCardWithFilter1.SelectedPersonInfo != null
+                     && _ShariaMode == enMode.Update &&
+                     clsSharia.IsShariaExist(ctrlPersonCardWithFilter1.PersonID, clsSharia.enSearchBy.PersonID)
+                     )
+                     ||
+                     (
+                     cbAddSharia.Checked && ctrlPersonCardWithFilter1.SelectedPersonInfo != null
+                     && _ShariaMode == enMode.AddNew &&
+                     !clsSharia.IsShariaExist(ctrlPersonCardWithFilter1.PersonID, clsSharia.enSearchBy.PersonID)
+                     );
+
+                }
+
+                else if (checkbox.Tag.ToString() == "3")//Judger
+                {
+                    tpJudgerInfo.Enabled = (
+                      cbAddJudger.Checked && ctrlPersonCardWithFilter1.SelectedPersonInfo != null
+                     && _JudgerMode == enMode.Update &&
+                     clsJudger.IsJudgerExistByPersonID((int)ctrlPersonCardWithFilter1.PersonID)
+                     )
+                     ||
+                     (
+                     cbAddJudger.Checked && ctrlPersonCardWithFilter1.SelectedPersonInfo != null
+                     && _JudgerMode == enMode.AddNew &&
+                     !clsJudger.IsJudgerExistByPersonID((int)ctrlPersonCardWithFilter1.PersonID)
+                     );
+
+                }
+            
+                else if (checkbox.Tag.ToString() == "4")//Expert
+                {
+                    tpExpertInfo.Enabled = (
+                      cbAddExpert.Checked && ctrlPersonCardWithFilter1.SelectedPersonInfo != null
+                     && _ExpertMode == enMode.Update &&
+                     clsExpert.Exists((int)ctrlPersonCardWithFilter1.PersonID, clsExpert.enFindBy.PersonID)
+                     )
+                     ||
+                     (
+                     cbAddExpert.Checked && ctrlPersonCardWithFilter1.SelectedPersonInfo != null
+                     && _ExpertMode == enMode.AddNew &&
+                     !clsExpert.Exists((int)ctrlPersonCardWithFilter1.PersonID, clsExpert.enFindBy.PersonID)
+                     );
+
+                }
+            }
+
         }
         private void cbAdd_CheckedChanged(object sender, EventArgs e)
         {
@@ -1559,15 +1582,15 @@ namespace AADL.Regulators
                 {
                     if (TagValue == (int)enSubscriptionType.Free)
                     {
-                        rbtnRegulatoryFree.Checked = rbtnShariaFree.Checked = isChecked;
+                        rbtnRegulatoryFree.Checked = rbtnShariaFree.Checked =rbtnJudgerFree.Checked =  rbtnExpertFree.Checked = isChecked;
                     }
                     else if (TagValue == (int)enSubscriptionType.Medium)
                     {
-                        rbtnRegulatoryMedium.Checked = rbtnShariaMedium.Checked = isChecked;
+                        rbtnRegulatoryMedium.Checked = rbtnShariaMedium.Checked = rbtnJudgerMedium.Checked = rbtnExpertMedium.Checked = isChecked;
                     }
                     else if(TagValue == (int)enSubscriptionType.Special)
                     {
-                        rbtnRegulatorySpecial.Checked = rbtnShariaSpecial.Checked = isChecked;
+                        rbtnRegulatorySpecial.Checked = rbtnShariaSpecial.Checked = rbtnJudgerSpecial.Checked = rbtnExpertSpecial.Checked = isChecked;
                     }
                 }
 
@@ -1629,7 +1652,21 @@ namespace AADL.Regulators
                     lblTitle.ForeColor = System.Drawing.Color.LimeGreen;
                 }
             }
-        
+            else if (tcPractitionernfo.SelectedIndex == 3)
+            {
+                if (_ShariaMode == enMode.AddNew)
+                {
+                    lblTitle.Text = "أضافة محامي محكم جديد";
+                    lblTitle.ForeColor = System.Drawing.Color.Red;
+
+                }
+                else if (_ShariaMode == enMode.Update)
+                {
+                    lblTitle.Text = "تحديث او تعديل بيانات المحكم ";
+                    lblTitle.ForeColor = System.Drawing.Color.Red;
+                }
+            }
+
         }
 
         private void RadioButton_SubscriptionWay_CheckedChanged(object sender, EventArgs e)
@@ -1644,11 +1681,13 @@ namespace AADL.Regulators
                 {
                     if (TagValue == (int)enSubscriptionWay.SpecialSupport)
                     {
-                        rbtnRSpecialSupport.Checked = rbtnSSpecialSupport.Checked=isChecked;
+                        rbtnRSpecialSupport.Checked = rbtnSSpecialSupport.Checked=rbtnJSpecialSupport.Checked=
+                            rbtnESpecialSupport.Checked=isChecked;
                     }
                     else if (TagValue == (int)enSubscriptionWay.scholarship)
                     {
-                        rbtnSScholarship.Checked = rbtnRScholarship.Checked = isChecked;
+                        rbtnRScholarship.Checked = rbtnSScholarship.Checked = rbtnJScholarship.Checked =
+                                                rbtnEScholarship.Checked = isChecked;
                     }
                   
                 }
@@ -1858,6 +1897,91 @@ namespace AADL.Regulators
                     , "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine("Exception:\t" + ex.Message);
 
+            }
+        }
+
+        private void clbShariaCasesTypes_Validating(object sender, CancelEventArgs e)
+        {
+            if (rbtnShariaFree.Checked && clbShariaCasesTypes.CheckedItems.Count > 1)
+            {
+
+                errorProvider1.SetError(clbShariaCasesTypes, "لقد تجاوزت الحد المسموح من القضايا لهذا الاشتراك.");
+                e.Cancel = true;
+            }
+            else if(rbtnShariaMedium.Checked && clbShariaCasesTypes.CheckedItems.Count > 3)
+            {
+
+                errorProvider1.SetError(clbShariaCasesTypes, "لقد تجاوزت الحد المسموح من القضايا لهذا الاشتراك.");
+                e.Cancel = true;
+            }
+            else if (rbtnShariaSpecial.Checked && clbShariaCasesTypes.CheckedItems.Count > 5)
+            {
+
+                errorProvider1.SetError(clbShariaCasesTypes, "لقد تجاوزت الحد المسموح من القضايا لهذا الاشتراك.");
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider1.SetError(clbShariaCasesTypes, "");
+
+                e.Cancel = false;
+            }
+        }
+
+        private void clbJudgerCasesTypes_Validating(object sender, CancelEventArgs e)
+        {
+            if (rbtnJudgerFree.Checked && clbJudgerCasesTypes.CheckedItems.Count > 1)
+            {
+
+                errorProvider1.SetError(clbJudgerCasesTypes, "لقد تجاوزت الحد المسموح من القضايا لهذا الاشتراك.");
+                e.Cancel = true;
+            }
+            else if (rbtnJudgerMedium.Checked && clbJudgerCasesTypes.CheckedItems.Count > 3)
+            {
+
+                errorProvider1.SetError(clbJudgerCasesTypes, "لقد تجاوزت الحد المسموح من القضايا لهذا الاشتراك.");
+                e.Cancel = true;
+            }
+            else if (rbtnJudgerSpecial.Checked && clbJudgerCasesTypes.CheckedItems.Count > 5)
+            {
+
+                errorProvider1.SetError(clbJudgerCasesTypes, "لقد تجاوزت الحد المسموح من القضايا لهذا الاشتراك.");
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider1.SetError(clbJudgerCasesTypes, "");
+
+                e.Cancel = false;
+            }
+
+        }
+
+        private void clbExpertCasesTypes_Validating(object sender, CancelEventArgs e)
+        {
+            if (rbtnExpertFree.Checked && clbExpertCasesTypes.CheckedItems.Count > 1)
+            {
+
+                errorProvider1.SetError(clbExpertCasesTypes, "لقد تجاوزت الحد المسموح من القضايا لهذا الاشتراك.");
+                e.Cancel = true;
+            }
+            else if (rbtnExpertMedium.Checked && clbExpertCasesTypes.CheckedItems.Count > 3)
+            {
+
+                errorProvider1.SetError(clbExpertCasesTypes, "لقد تجاوزت الحد المسموح من القضايا لهذا الاشتراك.");
+                e.Cancel = true;
+            }
+            else if (rbtnExpertSpecial.Checked && clbExpertCasesTypes.CheckedItems.Count > 5)
+            {
+
+                errorProvider1.SetError(clbExpertCasesTypes, "لقد تجاوزت الحد المسموح من القضايا لهذا الاشتراك.");
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider1.SetError(clbExpertCasesTypes, "");
+
+                e.Cancel = false;
             }
         }
     }

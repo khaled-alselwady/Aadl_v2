@@ -11,6 +11,7 @@ namespace AADL_DataAccess.HelperClasses
         {
             if (ex is SqlException sqlEx)
             {
+                
                 var loggerToEventViewer = new clsErrorLogger(clsLogHandler.LogToEventViewer);
                 loggerToEventViewer.LogError("Database Exception", sqlEx);
             }
@@ -77,7 +78,7 @@ namespace AADL_DataAccess.HelperClasses
                     }
                 }
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 isFound = false;
                 clsDataAccessHelper.HandleException(ex);

@@ -1,6 +1,8 @@
 ﻿using AADLBusiness;
 using AADLBusiness;
-
+using AADLBusiness.Lists.Closed;
+using AADLBusiness.Lists.WhiteList;
+using BenchmarkDotNet.Toolchains.InProcess.NoEmit;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,9 +18,15 @@ namespace AADL.Lists
 {
     public partial class ctrlListInfo : UserControl
     {
-        private int _BlackListID = -1;
+        private int? _BlackListID =null;
+        private int? _WhiteListID =null;
+        private int? _ClosedListID =null;
 
-        private clsBlackList _BlackList;
+
+        private clsBlackList  _BlackList;
+        private clsWhiteList  _WhiteList;
+        private clsClosedList _ClosedList;
+
         public enum CreationMode {BlackList,WhiteList,ClosedList};
 
         private CreationMode _CreationMode;
@@ -36,7 +44,7 @@ namespace AADL.Lists
                         groupBox.Text = "القائمة السوداء";
                         this.Text = "نافذة القائمة السوداء";
 
-                        lbBlackListlD.Text = _BlackList.BlackListID.ToString();
+                        lbListlD.Text = _BlackList.BlackListID.ToString();
 
                         //reasons
 
@@ -45,7 +53,7 @@ namespace AADL.Lists
                             lvReasons.Items.Add(ReasonName);
                         }
 
-                        tbBlackListNote.Text=_BlackList.Notes.ToString();
+                        tbListNote.Text=_BlackList.Notes.ToString();
                         lbIssueDate.Text = _BlackList.AddedToListDate.ToShortDateString();
 
                         lbCreatedByUser.Text = clsUser.FindByUserID(_BlackList.CreatedByUserID).UserName.ToString();
@@ -58,6 +66,63 @@ namespace AADL.Lists
 
                         break;
                     }
+                
+                case CreationMode.WhiteList:
+                    {
+                        groupBox.Text = "القائمة البيضاء";
+                        this.Text = "نافذة القائمة البيضاء";
+
+                        lbListlD.Text = _WhiteList.WhiteListID.ToString();
+
+                        //reasons
+
+                        foreach (string ReasonName in _WhiteList.WhiteListPractitionerReasonsIDNamesDictionary.Values)
+                        {
+                            lvReasons.Items.Add(ReasonName);
+                        }
+
+                        tbListNote.Text = _WhiteList.Notes.ToString();
+                        lbIssueDate.Text = _WhiteList.AddedToListDate.ToShortDateString();
+
+                        lbCreatedByUser.Text = clsUser.FindByUserID(_WhiteList.CreatedByUserID).UserName.ToString();
+
+                        lbLastEditBy.Text = _WhiteList.LastEditByUserID == null ? "[???]" :
+                           clsUser.FindByUserID(_WhiteList.LastEditByUserID).UserName.ToString();
+
+                        lbLastEditDate.Text = _WhiteList.LastEditDate == null ? "[???]" :
+                             _WhiteList.LastEditDate.Value.ToShortDateString();
+
+                        break;
+                    }
+
+                case CreationMode.ClosedList:
+                    {
+                        groupBox.Text = "القائمة المغلقة";
+                        this.Text = "نافذة القائمة المغلقة";
+                        
+                        lbListlD.Text = _ClosedList.ClosedListID.ToString();
+
+                        //reasons
+
+                        foreach (string ReasonName in _ClosedList.ClosedListPractitionerReasonsIDNamesDictionary.Values)
+                        {
+                            lvReasons.Items.Add(ReasonName);
+                        }
+
+                        tbListNote.Text = _ClosedList.Notes.ToString();
+                        lbIssueDate.Text = _ClosedList.AddedToListDate.ToShortDateString();
+
+                        lbCreatedByUser.Text = clsUser.FindByUserID(_ClosedList.CreatedByUserID).UserName.ToString();
+
+                        lbLastEditBy.Text = _ClosedList.LastEditByUserID == null ? "[???]" :
+                           clsUser.FindByUserID(_ClosedList.LastEditByUserID).UserName.ToString();
+
+                        lbLastEditDate.Text = _ClosedList.LastEditDate == null ? "[???]" :
+                             _ClosedList.LastEditDate.Value.ToShortDateString();
+
+                        break;
+                    }
+
             }
         }
 
@@ -69,8 +134,9 @@ namespace AADL.Lists
             {
                 case CreationMode.BlackList:
                     {
-                        if(int.TryParse(Value.ToString(),out _BlackListID))
+                        if(int.TryParse(Value.ToString(),out int ID))
                         {
+                            _BlackListID=ID;
                             
                             _BlackList=clsBlackList.Find(_BlackListID, 
                                 clsBlackList.enFindBy.BlackListID);
@@ -80,6 +146,36 @@ namespace AADL.Lists
                             }
                         }
                             break;
+                    }
+
+                case CreationMode.WhiteList:
+                    {
+                        if (int.TryParse(Value.ToString(), out int ID))
+                        {
+                            _WhiteListID = ID;
+
+                            _WhiteList = clsWhiteList.Find((int)_WhiteListID);
+                            if (_WhiteList != null)
+                            {
+                                _LoadData();
+                            }
+                        }
+                        break;
+                    }
+
+                case CreationMode.ClosedList:
+                    {
+                        if (int.TryParse(Value.ToString(), out int ID))
+                        {
+                            _ClosedListID = ID;
+
+                            _ClosedList= clsClosedList.Find((int)_ClosedListID);
+                            if (_ClosedList != null)
+                            {
+                                _LoadData();
+                            }
+                        }
+                        break;
                     }
             }
 

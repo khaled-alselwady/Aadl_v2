@@ -50,7 +50,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::AADL.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClose.Location = new System.Drawing.Point(326, 502);
+            this.btnClose.Location = new System.Drawing.Point(329, 600);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(135, 34);
             this.btnClose.TabIndex = 101;
@@ -64,7 +64,7 @@
             this.ctrlRegulatorCard1.Location = new System.Drawing.Point(7, 53);
             this.ctrlRegulatorCard1.Name = "ctrlRegulatorCard1";
             this.ctrlRegulatorCard1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ctrlRegulatorCard1.Size = new System.Drawing.Size(759, 443);
+            this.ctrlRegulatorCard1.Size = new System.Drawing.Size(759, 541);
             this.ctrlRegulatorCard1.TabIndex = 0;
             // 
             // frmRegulatorInfo
@@ -72,7 +72,7 @@
             this.AcceptButton = this.btnClose;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 554);
+            this.ClientSize = new System.Drawing.Size(778, 646);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlRegulatorCard1);

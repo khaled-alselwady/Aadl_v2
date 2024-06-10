@@ -24,14 +24,23 @@ namespace AADL.Regulators
 
         private void frmRegulatorInfo_Load(object sender, EventArgs e)
         {
-            if (_RegulatorID != -1)
+            try
             {
-                ctrlRegulatorCard1.LoadRegulatorInfo(_RegulatorID, ctrlRegulatorCard.LoadRegulatorBy.RegulatorID);
+
+                if (_RegulatorID != -1)
+                {
+                    ctrlRegulatorCard1.LoadRegulatorInfo(_RegulatorID, ctrlRegulatorCard.LoadRegulatorBy.RegulatorID);
+                }
+                else
+                {
+                    MessageBox.Show("الرقم التعريفي للمحامي النظامي ,غير مدخل بشكل صحيح", "فشل",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (
+            Exception ex)
             {
-                MessageBox.Show("الرقم التعريفي للمحامي النظامي ,غير مدخل بشكل صحيح", "فشل",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                clsHelperClasses.WriteEventToLogFile("Regulator info form ,\n" + ex.Message, System.Diagnostics.EventLogEntryType.Error);
             }
         }
 

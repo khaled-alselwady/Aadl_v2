@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gpDraft = new System.Windows.Forms.GroupBox();
+            this.lbSubscriptionWay = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.lbSubscriptionType = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,7 +45,6 @@
             this.lbBlackList = new System.Windows.Forms.LinkLabel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbLawyer = new System.Windows.Forms.LinkLabel();
             this.llEditRegulatorInfo = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -60,10 +62,12 @@
             this.label22 = new System.Windows.Forms.Label();
             this.lblRegulatorID = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lbSubscriptionWay = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbPersonInfo = new System.Windows.Forms.LinkLabel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.lbFullName = new System.Windows.Forms.Label();
             this.gpDraft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.cmsCases.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -73,11 +77,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // gpDraft
             // 
+            this.gpDraft.Controls.Add(this.lbFullName);
+            this.gpDraft.Controls.Add(this.label4);
+            this.gpDraft.Controls.Add(this.pictureBox8);
+            this.gpDraft.Controls.Add(this.lbPersonInfo);
             this.gpDraft.Controls.Add(this.lbSubscriptionWay);
             this.gpDraft.Controls.Add(this.pictureBox7);
             this.gpDraft.Controls.Add(this.label5);
@@ -90,7 +98,6 @@
             this.gpDraft.Controls.Add(this.lbBlackList);
             this.gpDraft.Controls.Add(this.pictureBox4);
             this.gpDraft.Controls.Add(this.label1);
-            this.gpDraft.Controls.Add(this.lbLawyer);
             this.gpDraft.Controls.Add(this.llEditRegulatorInfo);
             this.gpDraft.Controls.Add(this.pictureBox1);
             this.gpDraft.Controls.Add(this.groupBox2);
@@ -105,16 +112,48 @@
             this.gpDraft.Name = "gpDraft";
             this.gpDraft.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gpDraft.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gpDraft.Size = new System.Drawing.Size(752, 459);
+            this.gpDraft.Size = new System.Drawing.Size(752, 521);
             this.gpDraft.TabIndex = 7;
             this.gpDraft.TabStop = false;
             this.gpDraft.Text = "معلومات المحامي النظامي";
+            // 
+            // lbSubscriptionWay
+            // 
+            this.lbSubscriptionWay.AutoSize = true;
+            this.lbSubscriptionWay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSubscriptionWay.Location = new System.Drawing.Point(426, 250);
+            this.lbSubscriptionWay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbSubscriptionWay.Name = "lbSubscriptionWay";
+            this.lbSubscriptionWay.Size = new System.Drawing.Size(53, 20);
+            this.lbSubscriptionWay.TabIndex = 203;
+            this.lbSubscriptionWay.Text = "[????]";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::AADL.Properties.Resources.ApplicationType;
+            this.pictureBox7.Location = new System.Drawing.Point(581, 250);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(31, 26);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 202;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(622, 250);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 20);
+            this.label5.TabIndex = 201;
+            this.label5.Text = "طريقة الاشتراك\"";
             // 
             // lbSubscriptionType
             // 
             this.lbSubscriptionType.AutoSize = true;
             this.lbSubscriptionType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSubscriptionType.Location = new System.Drawing.Point(448, 148);
+            this.lbSubscriptionType.Location = new System.Drawing.Point(426, 191);
             this.lbSubscriptionType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSubscriptionType.Name = "lbSubscriptionType";
             this.lbSubscriptionType.Size = new System.Drawing.Size(53, 20);
@@ -124,7 +163,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::AADL.Properties.Resources.ApplicationType;
-            this.pictureBox6.Location = new System.Drawing.Point(581, 148);
+            this.pictureBox6.Location = new System.Drawing.Point(581, 191);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(31, 26);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -135,7 +174,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(645, 148);
+            this.label3.Location = new System.Drawing.Point(639, 191);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 20);
@@ -151,7 +190,7 @@
             this.lvCasestypes.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lvCasestypes.ForeColor = System.Drawing.Color.Black;
             this.lvCasestypes.HideSelection = false;
-            this.lvCasestypes.Location = new System.Drawing.Point(9, 134);
+            this.lvCasestypes.Location = new System.Drawing.Point(7, 191);
             this.lvCasestypes.Name = "lvCasestypes";
             this.lvCasestypes.RightToLeftLayout = true;
             this.lvCasestypes.Size = new System.Drawing.Size(349, 283);
@@ -190,7 +229,7 @@
             // 
             this.lbClosedList.AutoSize = true;
             this.lbClosedList.Enabled = false;
-            this.lbClosedList.Location = new System.Drawing.Point(24, 420);
+            this.lbClosedList.Location = new System.Drawing.Point(29, 482);
             this.lbClosedList.Name = "lbClosedList";
             this.lbClosedList.Size = new System.Drawing.Size(78, 20);
             this.lbClosedList.TabIndex = 196;
@@ -202,7 +241,7 @@
             // 
             this.lbWhiteList.AutoSize = true;
             this.lbWhiteList.Enabled = false;
-            this.lbWhiteList.Location = new System.Drawing.Point(194, 420);
+            this.lbWhiteList.Location = new System.Drawing.Point(194, 482);
             this.lbWhiteList.Name = "lbWhiteList";
             this.lbWhiteList.Size = new System.Drawing.Size(85, 20);
             this.lbWhiteList.TabIndex = 195;
@@ -214,7 +253,7 @@
             // 
             this.lbBlackList.AutoSize = true;
             this.lbBlackList.Enabled = false;
-            this.lbBlackList.Location = new System.Drawing.Point(375, 420);
+            this.lbBlackList.Location = new System.Drawing.Point(375, 482);
             this.lbBlackList.Name = "lbBlackList";
             this.lbBlackList.Size = new System.Drawing.Size(84, 20);
             this.lbBlackList.TabIndex = 194;
@@ -225,7 +264,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::AADL.Properties.Resources.Count_32;
-            this.pictureBox4.Location = new System.Drawing.Point(227, 96);
+            this.pictureBox4.Location = new System.Drawing.Point(225, 151);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(31, 26);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -236,30 +275,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(265, 96);
+            this.label1.Location = new System.Drawing.Point(263, 157);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 192;
             this.label1.Text = "أنواع القضايا:";
             // 
-            // lbLawyer
-            // 
-            this.lbLawyer.AutoSize = true;
-            this.lbLawyer.Enabled = false;
-            this.lbLawyer.Location = new System.Drawing.Point(9, 96);
-            this.lbLawyer.Name = "lbLawyer";
-            this.lbLawyer.Size = new System.Drawing.Size(40, 20);
-            this.lbLawyer.TabIndex = 190;
-            this.lbLawyer.TabStop = true;
-            this.lbLawyer.Text = "محامي";
-            this.lbLawyer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbLawyer_LinkClicked);
-            // 
             // llEditRegulatorInfo
             // 
             this.llEditRegulatorInfo.AutoSize = true;
             this.llEditRegulatorInfo.Enabled = false;
-            this.llEditRegulatorInfo.Location = new System.Drawing.Point(603, 420);
+            this.llEditRegulatorInfo.Location = new System.Drawing.Point(603, 482);
             this.llEditRegulatorInfo.Name = "llEditRegulatorInfo";
             this.llEditRegulatorInfo.Size = new System.Drawing.Size(133, 20);
             this.llEditRegulatorInfo.TabIndex = 175;
@@ -270,7 +297,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AADL.Properties.Resources.serial_number__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(581, 90);
+            this.pictureBox1.Location = new System.Drawing.Point(581, 38);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -288,7 +315,7 @@
             this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.lbCreatedByUserID);
-            this.groupBox2.Location = new System.Drawing.Point(364, 253);
+            this.groupBox2.Location = new System.Drawing.Point(362, 310);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(381, 164);
             this.groupBox2.TabIndex = 170;
@@ -309,7 +336,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(266, 130);
+            this.label2.Location = new System.Drawing.Point(261, 130);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 20);
@@ -395,7 +422,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(645, 90);
+            this.label9.Location = new System.Drawing.Point(645, 38);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 20);
@@ -407,7 +434,7 @@
             this.lbMemberShip.AutoSize = true;
             this.lbMemberShip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMemberShip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lbMemberShip.Location = new System.Drawing.Point(444, 90);
+            this.lbMemberShip.Location = new System.Drawing.Point(423, 90);
             this.lbMemberShip.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbMemberShip.Name = "lbMemberShip";
             this.lbMemberShip.Size = new System.Drawing.Size(59, 20);
@@ -418,7 +445,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(637, 37);
+            this.label22.Location = new System.Drawing.Point(637, 139);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(99, 20);
@@ -429,7 +456,7 @@
             // 
             this.lblRegulatorID.AutoSize = true;
             this.lblRegulatorID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegulatorID.Location = new System.Drawing.Point(450, 43);
+            this.lblRegulatorID.Location = new System.Drawing.Point(426, 139);
             this.lblRegulatorID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegulatorID.Name = "lblRegulatorID";
             this.lblRegulatorID.Size = new System.Drawing.Size(53, 20);
@@ -439,44 +466,56 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::AADL.Properties.Resources.serial_number__1_;
-            this.pictureBox3.Location = new System.Drawing.Point(581, 37);
+            this.pictureBox3.Location = new System.Drawing.Point(581, 90);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(31, 26);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 122;
             this.pictureBox3.TabStop = false;
             // 
-            // lbSubscriptionWay
+            // lbPersonInfo
             // 
-            this.lbSubscriptionWay.AutoSize = true;
-            this.lbSubscriptionWay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSubscriptionWay.Location = new System.Drawing.Point(449, 207);
-            this.lbSubscriptionWay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbSubscriptionWay.Name = "lbSubscriptionWay";
-            this.lbSubscriptionWay.Size = new System.Drawing.Size(53, 20);
-            this.lbSubscriptionWay.TabIndex = 203;
-            this.lbSubscriptionWay.Text = "[????]";
+            this.lbPersonInfo.AutoSize = true;
+            this.lbPersonInfo.Enabled = false;
+            this.lbPersonInfo.Location = new System.Drawing.Point(7, 157);
+            this.lbPersonInfo.Name = "lbPersonInfo";
+            this.lbPersonInfo.Size = new System.Drawing.Size(100, 20);
+            this.lbPersonInfo.TabIndex = 204;
+            this.lbPersonInfo.TabStop = true;
+            this.lbPersonInfo.Text = "البيانات الشخصية";
+            this.lbPersonInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbPersonInfo_LinkClicked);
             // 
-            // pictureBox7
+            // label4
             // 
-            this.pictureBox7.Image = global::AADL.Properties.Resources.ApplicationType;
-            this.pictureBox7.Location = new System.Drawing.Point(582, 207);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(31, 26);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 202;
-            this.pictureBox7.TabStop = false;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(650, 90);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 20);
+            this.label4.TabIndex = 205;
+            this.label4.Text = "رقم العضوية";
             // 
-            // label5
+            // pictureBox8
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(646, 207);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 20);
-            this.label5.TabIndex = 201;
-            this.label5.Text = "نوع الاشتراك:";
+            this.pictureBox8.Image = global::AADL.Properties.Resources.serial_number__1_;
+            this.pictureBox8.Location = new System.Drawing.Point(581, 139);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(31, 26);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 206;
+            this.pictureBox8.TabStop = false;
+            // 
+            // lbFullName
+            // 
+            this.lbFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFullName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbFullName.Location = new System.Drawing.Point(345, 38);
+            this.lbFullName.Name = "lbFullName";
+            this.lbFullName.Size = new System.Drawing.Size(215, 29);
+            this.lbFullName.TabIndex = 208;
+            this.lbFullName.Text = "[????]";
+            this.lbFullName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ctrlRegulatorCard
             // 
@@ -485,9 +524,10 @@
             this.Controls.Add(this.gpDraft);
             this.Name = "ctrlRegulatorCard";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Size = new System.Drawing.Size(759, 468);
+            this.Size = new System.Drawing.Size(759, 527);
             this.gpDraft.ResumeLayout(false);
             this.gpDraft.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.cmsCases.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -498,7 +538,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -523,7 +563,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbLastEditDate;
-        private System.Windows.Forms.LinkLabel lbLawyer;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel lbClosedList;
@@ -539,5 +578,9 @@
         private System.Windows.Forms.Label lbSubscriptionWay;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.LinkLabel lbPersonInfo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label lbFullName;
     }
 }

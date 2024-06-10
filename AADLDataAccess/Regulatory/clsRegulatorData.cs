@@ -65,6 +65,7 @@ namespace AADLDataAccess
                                     LastEditByUserID = reader["LastEditByUserID"] != DBNull.Value ? LastEditByUserID=(int)reader["LastEditByUserID"] : null;
                                     CreatedByUserID = (int)reader["CreatedByUserID"];
                                     IsActive = (bool)reader["IsActive"];
+                                    PersonID = (int)reader["PersonID"];
                                 }
 
                                 // Read second result set

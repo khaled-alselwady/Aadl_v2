@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbBlackListlD = new System.Windows.Forms.Label();
+            this.lbListlD = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox = new System.Windows.Forms.GroupBox();
+            this.lbLastEditBy = new System.Windows.Forms.Label();
+            this.lbLastEditDate = new System.Windows.Forms.Label();
+            this.lbCreatedByUser = new System.Windows.Forms.Label();
+            this.lbIssueDate = new System.Windows.Forms.Label();
             this.lvReasons = new System.Windows.Forms.ListView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbBlackListNote = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lbIssueDate = new System.Windows.Forms.Label();
-            this.lbCreatedByUser = new System.Windows.Forms.Label();
-            this.lbLastEditDate = new System.Windows.Forms.Label();
-            this.lbLastEditBy = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbListNote = new System.Windows.Forms.TextBox();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -56,17 +56,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbBlackListlD
+            // lbListlD
             // 
-            this.lbBlackListlD.AutoSize = true;
-            this.lbBlackListlD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBlackListlD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lbBlackListlD.Location = new System.Drawing.Point(70, 32);
-            this.lbBlackListlD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbBlackListlD.Name = "lbBlackListlD";
-            this.lbBlackListlD.Size = new System.Drawing.Size(49, 20);
-            this.lbBlackListlD.TabIndex = 145;
-            this.lbBlackListlD.Text = "[???]";
+            this.lbListlD.AutoSize = true;
+            this.lbListlD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbListlD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lbListlD.Location = new System.Drawing.Point(70, 32);
+            this.lbListlD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbListlD.Name = "lbListlD";
+            this.lbListlD.Size = new System.Drawing.Size(49, 20);
+            this.lbListlD.TabIndex = 145;
+            this.lbListlD.Text = "[???]";
             // 
             // label4
             // 
@@ -94,12 +94,12 @@
             this.groupBox.Controls.Add(this.label7);
             this.groupBox.Controls.Add(this.pictureBox1);
             this.groupBox.Controls.Add(this.label1);
-            this.groupBox.Controls.Add(this.lbBlackListlD);
+            this.groupBox.Controls.Add(this.lbListlD);
             this.groupBox.Controls.Add(this.label5);
             this.groupBox.Controls.Add(this.pictureBox2);
             this.groupBox.Controls.Add(this.label4);
             this.groupBox.Controls.Add(this.label3);
-            this.groupBox.Controls.Add(this.tbBlackListNote);
+            this.groupBox.Controls.Add(this.tbListNote);
             this.groupBox.Location = new System.Drawing.Point(3, 3);
             this.groupBox.Name = "groupBox";
             this.groupBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -107,6 +107,52 @@
             this.groupBox.TabIndex = 143;
             this.groupBox.TabStop = false;
             this.groupBox.Text = "القائمة السوداء";
+            // 
+            // lbLastEditBy
+            // 
+            this.lbLastEditBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLastEditBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbLastEditBy.Location = new System.Drawing.Point(0, 423);
+            this.lbLastEditBy.Name = "lbLastEditBy";
+            this.lbLastEditBy.Size = new System.Drawing.Size(189, 30);
+            this.lbLastEditBy.TabIndex = 161;
+            this.lbLastEditBy.Tag = "";
+            this.lbLastEditBy.Text = "[???]";
+            this.lbLastEditBy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbLastEditDate
+            // 
+            this.lbLastEditDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLastEditDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbLastEditDate.Location = new System.Drawing.Point(0, 378);
+            this.lbLastEditDate.Name = "lbLastEditDate";
+            this.lbLastEditDate.Size = new System.Drawing.Size(189, 30);
+            this.lbLastEditDate.TabIndex = 160;
+            this.lbLastEditDate.Tag = "";
+            this.lbLastEditDate.Text = "[???]";
+            this.lbLastEditDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbCreatedByUser
+            // 
+            this.lbCreatedByUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCreatedByUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbCreatedByUser.Location = new System.Drawing.Point(0, 321);
+            this.lbCreatedByUser.Name = "lbCreatedByUser";
+            this.lbCreatedByUser.Size = new System.Drawing.Size(189, 30);
+            this.lbCreatedByUser.TabIndex = 158;
+            this.lbCreatedByUser.Text = "[???]";
+            this.lbCreatedByUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbIssueDate
+            // 
+            this.lbIssueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIssueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbIssueDate.Location = new System.Drawing.Point(0, 272);
+            this.lbIssueDate.Name = "lbIssueDate";
+            this.lbIssueDate.Size = new System.Drawing.Size(189, 30);
+            this.lbIssueDate.TabIndex = 157;
+            this.lbIssueDate.Text = "[???]";
+            this.lbIssueDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lvReasons
             // 
@@ -120,6 +166,16 @@
             this.lvReasons.UseCompatibleStateImageBehavior = false;
             this.lvReasons.View = System.Windows.Forms.View.List;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::AADL.Properties.Resources.Person_32;
+            this.pictureBox5.Location = new System.Drawing.Point(195, 424);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(31, 26);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 154;
+            this.pictureBox5.TabStop = false;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -130,6 +186,26 @@
             this.label6.Size = new System.Drawing.Size(66, 18);
             this.label6.TabIndex = 153;
             this.label6.Text = "قام بتعديل";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::AADL.Properties.Resources.Calendar_32;
+            this.pictureBox4.Location = new System.Drawing.Point(195, 379);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(31, 26);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 152;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::AADL.Properties.Resources.Person_32;
+            this.pictureBox3.Location = new System.Drawing.Point(195, 326);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(31, 26);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 152;
+            this.pictureBox3.TabStop = false;
             // 
             // label9
             // 
@@ -153,6 +229,16 @@
             this.label7.TabIndex = 150;
             this.label7.Text = "قام بالانشاء:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AADL.Properties.Resources.Calendar_32;
+            this.pictureBox1.Location = new System.Drawing.Point(195, 273);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 149;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -175,6 +261,16 @@
             this.label5.TabIndex = 137;
             this.label5.Text = "الاسباب:";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::AADL.Properties.Resources.PersonDetails_32;
+            this.pictureBox2.Location = new System.Drawing.Point(195, 32);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(31, 26);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 146;
+            this.pictureBox2.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -186,110 +282,14 @@
             this.label3.TabIndex = 136;
             this.label3.Text = "ملاحظات:";
             // 
-            // tbBlackListNote
+            // tbListNote
             // 
-            this.tbBlackListNote.Enabled = false;
-            this.tbBlackListNote.Location = new System.Drawing.Point(39, 197);
-            this.tbBlackListNote.Multiline = true;
-            this.tbBlackListNote.Name = "tbBlackListNote";
-            this.tbBlackListNote.Size = new System.Drawing.Size(237, 45);
-            this.tbBlackListNote.TabIndex = 1;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::AADL.Properties.Resources.Person_32;
-            this.pictureBox5.Location = new System.Drawing.Point(195, 424);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(31, 26);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 154;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::AADL.Properties.Resources.Calendar_32;
-            this.pictureBox4.Location = new System.Drawing.Point(195, 379);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(31, 26);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 152;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::AADL.Properties.Resources.Person_32;
-            this.pictureBox3.Location = new System.Drawing.Point(195, 326);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(31, 26);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 152;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AADL.Properties.Resources.Calendar_32;
-            this.pictureBox1.Location = new System.Drawing.Point(195, 273);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 149;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::AADL.Properties.Resources.PersonDetails_32;
-            this.pictureBox2.Location = new System.Drawing.Point(195, 32);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 26);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 146;
-            this.pictureBox2.TabStop = false;
-            // 
-            // lbIssueDate
-            // 
-            this.lbIssueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIssueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbIssueDate.Location = new System.Drawing.Point(0, 272);
-            this.lbIssueDate.Name = "lbIssueDate";
-            this.lbIssueDate.Size = new System.Drawing.Size(189, 30);
-            this.lbIssueDate.TabIndex = 157;
-            this.lbIssueDate.Text = "[???]";
-            this.lbIssueDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbCreatedByUser
-            // 
-            this.lbCreatedByUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCreatedByUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbCreatedByUser.Location = new System.Drawing.Point(0, 321);
-            this.lbCreatedByUser.Name = "lbCreatedByUser";
-            this.lbCreatedByUser.Size = new System.Drawing.Size(189, 30);
-            this.lbCreatedByUser.TabIndex = 158;
-            this.lbCreatedByUser.Text = "[???]";
-            this.lbCreatedByUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbLastEditDate
-            // 
-            this.lbLastEditDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLastEditDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbLastEditDate.Location = new System.Drawing.Point(0, 378);
-            this.lbLastEditDate.Name = "lbLastEditDate";
-            this.lbLastEditDate.Size = new System.Drawing.Size(189, 30);
-            this.lbLastEditDate.TabIndex = 160;
-            this.lbLastEditDate.Tag = "";
-            this.lbLastEditDate.Text = "[???]";
-            this.lbLastEditDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbLastEditBy
-            // 
-            this.lbLastEditBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLastEditBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbLastEditBy.Location = new System.Drawing.Point(0, 423);
-            this.lbLastEditBy.Name = "lbLastEditBy";
-            this.lbLastEditBy.Size = new System.Drawing.Size(189, 30);
-            this.lbLastEditBy.TabIndex = 161;
-            this.lbLastEditBy.Tag = "";
-            this.lbLastEditBy.Text = "[???]";
-            this.lbLastEditBy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tbListNote.Enabled = false;
+            this.tbListNote.Location = new System.Drawing.Point(39, 197);
+            this.tbListNote.Multiline = true;
+            this.tbListNote.Name = "tbListNote";
+            this.tbListNote.Size = new System.Drawing.Size(237, 45);
+            this.tbListNote.TabIndex = 1;
             // 
             // ctrlListInfo
             // 
@@ -311,14 +311,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbBlackListlD;
+        private System.Windows.Forms.Label lbListlD;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbBlackListNote;
+        private System.Windows.Forms.TextBox tbListNote;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label6;

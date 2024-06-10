@@ -31,7 +31,7 @@ namespace AADLBusiness
         {
             string SubscriptionName = "";
 
-            if (clsSubscriptionTypeData.GetSubscriptionInfoByID(SubscriptionWayID, ref SubscriptionName))
+            if (clsSubscriptionWayData.GetSubscriptionInfoByID(SubscriptionWayID, ref SubscriptionName))
 
                 return new clsSubscriptionWay(SubscriptionWayID, SubscriptionName);
             else

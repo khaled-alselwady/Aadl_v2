@@ -109,7 +109,7 @@ namespace AADLBusiness
 
         }
         
-        public  static clsBlackList Find(int Value, enFindBy FindBy)
+        public  static clsBlackList Find(int? Value, enFindBy FindBy)
         {
             bool IsFound = false;
 

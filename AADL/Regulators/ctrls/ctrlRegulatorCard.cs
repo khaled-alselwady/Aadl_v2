@@ -4,6 +4,8 @@ using AADL.People;
 using AADL.Properties;
 using AADLBusiness;
 using AADLBusiness;
+using AADLBusiness.Lists.Closed;
+using AADLBusiness.Lists.WhiteList;
 using AADLBusiness.Sharia;
 using CommandLine.Text;
 using System;
@@ -29,21 +31,11 @@ namespace AADL.Regulators
 
         public enum enCreationMode { Regulator,Sharia,Expert,Judger}
         private clsRegulator _Regulator;
-        private clsSharia _Sharia;
-
 
         private int? _RegulatorID = null;
-
         public int? RegulatorID
         {
             get { return _RegulatorID; }
-        }
-
-        private int? _ShariaID = null;
-
-        public int? ShariaID
-        {
-            get { return _ShariaID; }
         }
 
         public clsRegulator SelectedRegulatorInfo
@@ -51,10 +43,6 @@ namespace AADL.Regulators
             get { return _Regulator; }
         }
 
-        public clsSharia SelectedShariaInfo
-        {
-            get { return _Sharia; }
-        }
         public ctrlRegulatorCard()
         {
             InitializeComponent();
@@ -138,94 +126,18 @@ namespace AADL.Regulators
 
         }
 
-        public void LoadShariaInfo<T>(T Value, LoadShariaBy enLoadShariaBy)
-        {
-            switch (enLoadShariaBy)
-            {
-                case LoadShariaBy.ShariaID:
-                    {
-
-                        if (Value != null && int.TryParse(Value.ToString(), out int RegulatorID))
-                        {
-                            _Sharia = clsSharia.Find(RegulatorID, clsSharia.enSearchBy.ShariaID);
-                            if (_Regulator == null)
-                            {
-                                ResetRegulatorInfo();
-                                MessageBox.Show("لا يوجد شخص يحمل (الرقم التعريفي) .  = " + RegulatorID.ToString(), "خطاء", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                return;
-                            }
-                        }
-
-                        break;
-                    }
-
-                case LoadShariaBy.PersonID:
-                    {
-
-                        if (Value != null && int.TryParse(Value.ToString(), out int PersonID))
-                        {
-                            _Regulator = clsRegulator.Find(PersonID, clsRegulator.enSearchBy.PersonID);
-                            if (_Regulator == null)
-                            {
-                                ResetRegulatorInfo();
-                                MessageBox.Show("لا يوجد شخص يحمل (الرقم التعريفي) .  = " + PersonID.ToString(), "خطاء", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                return;
-                            }
-                        }
-
-                        break;
-                    }
-
-                case LoadShariaBy.ShariaLicenseNumber:
-                    {
-                        string MemberShipNumber = Value.ToString();
-                        if (!string.IsNullOrEmpty(MemberShipNumber))
-                        {
-                            _Regulator = clsRegulator.Find(MemberShipNumber, clsRegulator.enSearchBy.MemberShipNumber);
-                            if (_Regulator == null)
-                            {
-                                ResetRegulatorInfo();
-                                MessageBox.Show("لا يوجد شخص يحمل (الرقم التعريفي) .  = " + MemberShipNumber.ToString(), "خطاء", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                return;
-                            }
-                        }
-
-                        break;
-                    }
-
-                case LoadShariaBy.PractitionerID:
-                    {
-
-                        if (Value != null && int.TryParse(Value.ToString(), out int PractitionerID))
-                        {
-                            _Regulator = clsRegulator.Find(PractitionerID, clsRegulator.enSearchBy.PractitionerID);
-                            if (_Regulator == null)
-                            {
-                                ResetRegulatorInfo();
-                                MessageBox.Show("لا يوجد شخص يحمل (الرقم التعريفي) .  = " + PractitionerID.ToString(), "خطاء", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                return;
-                            }
-                        }
-
-                        break;
-
-                    }
-
-            }
-            _FillRegulatorInfo();
-
-        }
-
         private void _FillRegulatorInfo()
         {
             try
             {
-                //Link - label.+ (black-white-closed lists)
+                lbFullName.Text = _Regulator.SelectedPersonInfo.FullName;
                 llEditRegulatorInfo.Enabled = true;
-                lbLawyer.Enabled = true;
+                lbPersonInfo.Enabled = _Regulator!=null;
                 lbBlackList.Enabled = _Regulator.IsPractitionerInBlackList();
-                //lbWhiteList.Enabled = (clsBlackList.IsLawyerInBlackList(_Regulator.LawyerID)!= null ? true : false);
-                // lbClosedList.Enabled = (_Regulator.ClosedListID != null ? true : false);
+                lbWhiteList.Enabled = (clsWhiteList.IsPractitionerInWhiteList(_Regulator.PractitionerID,
+                    clsPractitioner.enPractitionerType.Regulatory));
+                 lbClosedList.Enabled = (clsClosedList.IsPractitionerInClosedList(_Regulator.PractitionerID,
+                    clsPractitioner.enPractitionerType.Regulatory));
 
                 //Regulator info.
                 _RegulatorID = _Regulator.RegulatorID;
@@ -297,25 +209,9 @@ namespace AADL.Regulators
 
             //Link label
             llEditRegulatorInfo.Enabled = false;
-            lbLawyer.Enabled = false;
             lbBlackList.Enabled = false;
             lbWhiteList.Enabled = false;
             lbClosedList.Enabled = false;
-        }
-
-        private void lbLawyer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-           
-            //Show lawyer info by ID ..
-
-            //remove person info and replace with lawyer data. 
-
-            //frmAddUpdatePerson frm = new frmAddUpdatePerson(ID);
-            //frm.ShowDialog();
-
-            ////refresh
-            //LoadPersonInfo(_PersonID.Value, LoadPersonBy.PersonID);
-
         }
 
         private void lbClosedList_Click(object sender, EventArgs e)
@@ -325,7 +221,9 @@ namespace AADL.Regulators
 
         private void llEditRegulatorInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            frmAddUpdatePractitioner frmAddUpdatePractitioner = new frmAddUpdatePractitioner(_Regulator.PractitionerID,
+                frmAddUpdatePractitioner.enRunSpecificTabPage.Regulatory);
+            frmAddUpdatePractitioner.ShowDialog();
         }
 
         private void lbBlackList_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -346,15 +244,20 @@ namespace AADL.Regulators
 
         private void lbWhiteList_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            frmListInfo ListInfoForm= new frmListInfo((int)clsWhiteList.Find(_Regulator.PractitionerID,
+                clsPractitioner.enPractitionerType.Regulatory).WhiteListID,
+                ctrlListInfo.CreationMode.WhiteList);
+            ListInfoForm.ShowDialog();
         }
 
         private void lbClosedList_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            frmListInfo ListInfoForm = new frmListInfo((int)clsClosedList.Find(_Regulator.PractitionerID,
+           clsPractitioner.enPractitionerType.Regulatory).ClosedListID,
+           ctrlListInfo.CreationMode.ClosedList);
+            ListInfoForm.ShowDialog();
 
         }
-
-     
 
         private void أضافةToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -370,5 +273,12 @@ namespace AADL.Regulators
         {
 
         }
+
+        private void lbPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmPersonInfo frmPersonInfo = new frmPersonInfo(_Regulator.PersonID);
+            frmPersonInfo.ShowDialog();
+        }
     }
+
 }

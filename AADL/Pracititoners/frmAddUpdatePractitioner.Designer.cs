@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tpRegulatorInfo = new System.Windows.Forms.TabPage();
-            this.btnToPersonalPrevious = new System.Windows.Forms.Button();
-            this.btnToShariaNext = new System.Windows.Forms.Button();
             this.btnResetRegulatoryCases = new System.Windows.Forms.Button();
             this.btnRegulatoryClosedList = new System.Windows.Forms.Button();
             this.btnRegulatoryWhiteList = new System.Windows.Forms.Button();
@@ -57,11 +55,9 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.ctbRegulatoryMemberShipNumber = new myControlLibrary.myCustomControlTextBox();
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
-            this.ctrlPersonCardWithFilter1 = new AADL.People.controls.ctrlPersonCardWithFilter();
             this.btnPersonInfoNext = new System.Windows.Forms.Button();
             this.tcPractitionernfo = new System.Windows.Forms.TabControl();
             this.tpShariaInfo = new System.Windows.Forms.TabPage();
-            this.btnToRegulatorPrevious = new System.Windows.Forms.Button();
             this.gpShariaSubscriptionType = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbtnSScholarship = new System.Windows.Forms.RadioButton();
@@ -85,15 +81,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.gbAdditionType = new System.Windows.Forms.GroupBox();
-            this.cbAddSharia = new System.Windows.Forms.CheckBox();
-            this.cbAddExpert = new System.Windows.Forms.CheckBox();
-            this.cbAddJudger = new System.Windows.Forms.CheckBox();
-            this.cbAddRegulator = new System.Windows.Forms.CheckBox();
             this.tpJudgerInfo = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -115,6 +102,37 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.tpExpertInfo = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.rbtnEScholarship = new System.Windows.Forms.RadioButton();
+            this.rbtnESpecialSupport = new System.Windows.Forms.RadioButton();
+            this.rbtnExpertSpecial = new System.Windows.Forms.RadioButton();
+            this.rbtnExpertMedium = new System.Windows.Forms.RadioButton();
+            this.rbtnExpertFree = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.clbExpertCasesTypes = new System.Windows.Forms.CheckedListBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.gbAdditionType = new System.Windows.Forms.GroupBox();
+            this.cbAddSharia = new System.Windows.Forms.CheckBox();
+            this.cbAddExpert = new System.Windows.Forms.CheckBox();
+            this.cbAddJudger = new System.Windows.Forms.CheckBox();
+            this.cbAddRegulator = new System.Windows.Forms.CheckBox();
+            this.ctrlPersonCardWithFilter1 = new AADL.People.controls.ctrlPersonCardWithFilter();
             this.tpRegulatorInfo.SuspendLayout();
             this.gpRegulatorySubscriptionType.SuspendLayout();
             this.gpSubscriptionWay.SuspendLayout();
@@ -129,19 +147,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.gbAdditionType.SuspendLayout();
             this.tpJudgerInfo.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.tpExpertInfo.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.gbAdditionType.SuspendLayout();
             this.SuspendLayout();
             // 
             // tpRegulatorInfo
             // 
-            this.tpRegulatorInfo.Controls.Add(this.btnToPersonalPrevious);
-            this.tpRegulatorInfo.Controls.Add(this.btnToShariaNext);
             this.tpRegulatorInfo.Controls.Add(this.btnResetRegulatoryCases);
             this.tpRegulatorInfo.Controls.Add(this.btnRegulatoryClosedList);
             this.tpRegulatorInfo.Controls.Add(this.btnRegulatoryWhiteList);
@@ -167,32 +188,6 @@
             this.tpRegulatorInfo.Text = "النظامي";
             this.tpRegulatorInfo.UseVisualStyleBackColor = true;
             this.tpRegulatorInfo.Click += new System.EventHandler(this.tpRegulatorInfo_Click);
-            // 
-            // btnToPersonalPrevious
-            // 
-            this.btnToPersonalPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnToPersonalPrevious.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnToPersonalPrevious.Location = new System.Drawing.Point(1103, 699);
-            this.btnToPersonalPrevious.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnToPersonalPrevious.Name = "btnToPersonalPrevious";
-            this.btnToPersonalPrevious.Size = new System.Drawing.Size(126, 37);
-            this.btnToPersonalPrevious.TabIndex = 150;
-            this.btnToPersonalPrevious.Text = "السابق";
-            this.btnToPersonalPrevious.UseVisualStyleBackColor = true;
-            this.btnToPersonalPrevious.Click += new System.EventHandler(this.btnToPersonalPrevious_Click_1);
-            // 
-            // btnToShariaNext
-            // 
-            this.btnToShariaNext.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnToShariaNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnToShariaNext.Location = new System.Drawing.Point(7, 699);
-            this.btnToShariaNext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnToShariaNext.Name = "btnToShariaNext";
-            this.btnToShariaNext.Size = new System.Drawing.Size(126, 37);
-            this.btnToShariaNext.TabIndex = 149;
-            this.btnToShariaNext.Text = "التالي";
-            this.btnToShariaNext.UseVisualStyleBackColor = true;
-            this.btnToShariaNext.Click += new System.EventHandler(this.btnToShariaNext_Click);
             // 
             // btnResetRegulatoryCases
             // 
@@ -365,6 +360,7 @@
             this.clbRegulatoryCasesTypes.Size = new System.Drawing.Size(513, 365);
             this.clbRegulatoryCasesTypes.TabIndex = 2;
             this.clbRegulatoryCasesTypes.SelectedIndexChanged += new System.EventHandler(this.clbRegulatoryCasesTypes_SelectedIndexChanged);
+            this.clbRegulatoryCasesTypes.Validating += new System.ComponentModel.CancelEventHandler(this.clbRegulatoryCasesTypes_Validating);
             // 
             // cms
             // 
@@ -483,17 +479,6 @@
             this.tpPersonalInfo.TabIndex = 0;
             this.tpPersonalInfo.Text = "البيانات الشخصية";
             // 
-            // ctrlPersonCardWithFilter1
-            // 
-            this.ctrlPersonCardWithFilter1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ctrlPersonCardWithFilter1.FilterEnabled = true;
-            this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(163, 21);
-            this.ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
-            this.ctrlPersonCardWithFilter1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ctrlPersonCardWithFilter1.ShowAddPerson = true;
-            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(1067, 725);
-            this.ctrlPersonCardWithFilter1.TabIndex = 120;
-            // 
             // btnPersonInfoNext
             // 
             this.btnPersonInfoNext.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -513,6 +498,7 @@
             this.tcPractitionernfo.Controls.Add(this.tpRegulatorInfo);
             this.tcPractitionernfo.Controls.Add(this.tpShariaInfo);
             this.tcPractitionernfo.Controls.Add(this.tpJudgerInfo);
+            this.tcPractitionernfo.Controls.Add(this.tpExpertInfo);
             this.tcPractitionernfo.Location = new System.Drawing.Point(74, 162);
             this.tcPractitionernfo.Name = "tcPractitionernfo";
             this.tcPractitionernfo.RightToLeftLayout = true;
@@ -524,7 +510,6 @@
             // 
             // tpShariaInfo
             // 
-            this.tpShariaInfo.Controls.Add(this.btnToRegulatorPrevious);
             this.tpShariaInfo.Controls.Add(this.gpShariaSubscriptionType);
             this.tpShariaInfo.Controls.Add(this.btnShariaClosedList);
             this.tpShariaInfo.Controls.Add(this.btnShariaWhite);
@@ -549,19 +534,6 @@
             this.tpShariaInfo.TabIndex = 2;
             this.tpShariaInfo.Text = "شرعي";
             this.tpShariaInfo.UseVisualStyleBackColor = true;
-            // 
-            // btnToRegulatorPrevious
-            // 
-            this.btnToRegulatorPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnToRegulatorPrevious.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnToRegulatorPrevious.Location = new System.Drawing.Point(1103, 699);
-            this.btnToRegulatorPrevious.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnToRegulatorPrevious.Name = "btnToRegulatorPrevious";
-            this.btnToRegulatorPrevious.Size = new System.Drawing.Size(126, 37);
-            this.btnToRegulatorPrevious.TabIndex = 159;
-            this.btnToRegulatorPrevious.Text = "السابق";
-            this.btnToRegulatorPrevious.UseVisualStyleBackColor = true;
-            this.btnToRegulatorPrevious.Click += new System.EventHandler(this.btnToRegulatorPrevious_Click);
             // 
             // gpShariaSubscriptionType
             // 
@@ -745,6 +717,7 @@
             this.clbShariaCasesTypes.Size = new System.Drawing.Size(513, 365);
             this.clbShariaCasesTypes.TabIndex = 149;
             this.clbShariaCasesTypes.SelectedIndexChanged += new System.EventHandler(this.clbShariaCasesTypes_SelectedIndexChanged);
+            this.clbShariaCasesTypes.Validating += new System.ComponentModel.CancelEventHandler(this.clbShariaCasesTypes_Validating);
             // 
             // chkShariaIsActive
             // 
@@ -835,109 +808,6 @@
             this.pictureBox5.TabIndex = 134;
             this.pictureBox5.TabStop = false;
             // 
-            // lblTitle
-            // 
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTitle.Location = new System.Drawing.Point(-1, 9);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(1385, 39);
-            this.lblTitle.TabIndex = 119;
-            this.lblTitle.Text = "تعديل الطلب";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnClose
-            // 
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::AADL.Properties.Resources.Close_32;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClose.Location = new System.Drawing.Point(551, 967);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(135, 34);
-            this.btnClose.TabIndex = 120;
-            this.btnClose.Text = "اغلاق";
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Enabled = false;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSave.Image = global::AADL.Properties.Resources.Save_32;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.Location = new System.Drawing.Point(716, 967);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(135, 34);
-            this.btnSave.TabIndex = 121;
-            this.btnSave.Text = "حفظ";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // gbAdditionType
-            // 
-            this.gbAdditionType.Controls.Add(this.cbAddSharia);
-            this.gbAdditionType.Controls.Add(this.cbAddExpert);
-            this.gbAdditionType.Controls.Add(this.cbAddJudger);
-            this.gbAdditionType.Controls.Add(this.cbAddRegulator);
-            this.gbAdditionType.Location = new System.Drawing.Point(78, 78);
-            this.gbAdditionType.Name = "gbAdditionType";
-            this.gbAdditionType.Size = new System.Drawing.Size(200, 100);
-            this.gbAdditionType.TabIndex = 122;
-            this.gbAdditionType.TabStop = false;
-            this.gbAdditionType.Text = "نوع الاضافة او التعديل";
-            // 
-            // cbAddSharia
-            // 
-            this.cbAddSharia.AutoSize = true;
-            this.cbAddSharia.Location = new System.Drawing.Point(134, 72);
-            this.cbAddSharia.Name = "cbAddSharia";
-            this.cbAddSharia.Size = new System.Drawing.Size(60, 17);
-            this.cbAddSharia.TabIndex = 3;
-            this.cbAddSharia.Text = " شرعي";
-            this.cbAddSharia.UseVisualStyleBackColor = true;
-            this.cbAddSharia.CheckedChanged += new System.EventHandler(this.cbAdd_CheckedChanged);
-            // 
-            // cbAddExpert
-            // 
-            this.cbAddExpert.AutoSize = true;
-            this.cbAddExpert.Location = new System.Drawing.Point(16, 72);
-            this.cbAddExpert.Name = "cbAddExpert";
-            this.cbAddExpert.Size = new System.Drawing.Size(46, 17);
-            this.cbAddExpert.TabIndex = 2;
-            this.cbAddExpert.Text = "خبير";
-            this.cbAddExpert.UseVisualStyleBackColor = true;
-            this.cbAddExpert.CheckedChanged += new System.EventHandler(this.cbAdd_CheckedChanged);
-            // 
-            // cbAddJudger
-            // 
-            this.cbAddJudger.AutoSize = true;
-            this.cbAddJudger.Location = new System.Drawing.Point(16, 27);
-            this.cbAddJudger.Name = "cbAddJudger";
-            this.cbAddJudger.Size = new System.Drawing.Size(50, 17);
-            this.cbAddJudger.TabIndex = 1;
-            this.cbAddJudger.Text = "محكم";
-            this.cbAddJudger.UseVisualStyleBackColor = true;
-            this.cbAddJudger.CheckedChanged += new System.EventHandler(this.cbAdd_CheckedChanged);
-            // 
-            // cbAddRegulator
-            // 
-            this.cbAddRegulator.AutoSize = true;
-            this.cbAddRegulator.Location = new System.Drawing.Point(135, 27);
-            this.cbAddRegulator.Name = "cbAddRegulator";
-            this.cbAddRegulator.Size = new System.Drawing.Size(59, 17);
-            this.cbAddRegulator.TabIndex = 0;
-            this.cbAddRegulator.Text = " نظامي";
-            this.cbAddRegulator.UseVisualStyleBackColor = true;
-            this.cbAddRegulator.CheckedChanged += new System.EventHandler(this.cbAdd_CheckedChanged);
-            // 
             // tpJudgerInfo
             // 
             this.tpJudgerInfo.Controls.Add(this.groupBox2);
@@ -996,6 +866,7 @@
             this.rbtnJScholarship.Tag = "2";
             this.rbtnJScholarship.Text = "منحة";
             this.rbtnJScholarship.UseVisualStyleBackColor = true;
+            this.rbtnJScholarship.CheckedChanged += new System.EventHandler(this.RadioButton_SubscriptionWay_CheckedChanged);
             // 
             // rbtnJSpecialSupport
             // 
@@ -1007,6 +878,7 @@
             this.rbtnJSpecialSupport.Tag = "1";
             this.rbtnJSpecialSupport.Text = "دعم خاص";
             this.rbtnJSpecialSupport.UseVisualStyleBackColor = true;
+            this.rbtnJSpecialSupport.CheckedChanged += new System.EventHandler(this.RadioButton_SubscriptionWay_CheckedChanged);
             // 
             // rbtnJudgerSpecial
             // 
@@ -1018,6 +890,7 @@
             this.rbtnJudgerSpecial.Tag = "3";
             this.rbtnJudgerSpecial.Text = "مميز";
             this.rbtnJudgerSpecial.UseVisualStyleBackColor = true;
+            this.rbtnJudgerSpecial.CheckedChanged += new System.EventHandler(this.RadioButton_SubscriptionType_CheckedChanged);
             // 
             // rbtnJudgerMedium
             // 
@@ -1029,6 +902,7 @@
             this.rbtnJudgerMedium.Tag = "2";
             this.rbtnJudgerMedium.Text = "متوسط";
             this.rbtnJudgerMedium.UseVisualStyleBackColor = true;
+            this.rbtnJudgerMedium.CheckedChanged += new System.EventHandler(this.RadioButton_SubscriptionType_CheckedChanged);
             // 
             // rbtnJudgerFree
             // 
@@ -1040,6 +914,7 @@
             this.rbtnJudgerFree.Tag = "1";
             this.rbtnJudgerFree.Text = "مجاني";
             this.rbtnJudgerFree.UseVisualStyleBackColor = true;
+            this.rbtnJudgerFree.CheckedChanged += new System.EventHandler(this.RadioButton_SubscriptionType_CheckedChanged);
             // 
             // btnJudgerClosedList
             // 
@@ -1123,6 +998,7 @@
             this.clbJudgerCasesTypes.Name = "clbJudgerCasesTypes";
             this.clbJudgerCasesTypes.Size = new System.Drawing.Size(513, 365);
             this.clbJudgerCasesTypes.TabIndex = 166;
+            this.clbJudgerCasesTypes.Validating += new System.ComponentModel.CancelEventHandler(this.clbJudgerCasesTypes_Validating);
             // 
             // chkJudgerIsActive
             // 
@@ -1191,6 +1067,383 @@
             this.pictureBox7.TabIndex = 163;
             this.pictureBox7.TabStop = false;
             // 
+            // tpExpertInfo
+            // 
+            this.tpExpertInfo.Controls.Add(this.groupBox4);
+            this.tpExpertInfo.Controls.Add(this.button1);
+            this.tpExpertInfo.Controls.Add(this.button2);
+            this.tpExpertInfo.Controls.Add(this.button3);
+            this.tpExpertInfo.Controls.Add(this.button4);
+            this.tpExpertInfo.Controls.Add(this.label7);
+            this.tpExpertInfo.Controls.Add(this.label11);
+            this.tpExpertInfo.Controls.Add(this.clbExpertCasesTypes);
+            this.tpExpertInfo.Controls.Add(this.checkBox1);
+            this.tpExpertInfo.Controls.Add(this.label13);
+            this.tpExpertInfo.Controls.Add(this.pictureBox9);
+            this.tpExpertInfo.Controls.Add(this.label15);
+            this.tpExpertInfo.Controls.Add(this.label16);
+            this.tpExpertInfo.Controls.Add(this.pictureBox10);
+            this.tpExpertInfo.Location = new System.Drawing.Point(4, 22);
+            this.tpExpertInfo.Name = "tpExpertInfo";
+            this.tpExpertInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tpExpertInfo.Size = new System.Drawing.Size(1236, 744);
+            this.tpExpertInfo.TabIndex = 4;
+            this.tpExpertInfo.Text = "خبير";
+            this.tpExpertInfo.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.groupBox5);
+            this.groupBox4.Controls.Add(this.rbtnExpertSpecial);
+            this.groupBox4.Controls.Add(this.rbtnExpertMedium);
+            this.groupBox4.Controls.Add(this.rbtnExpertFree);
+            this.groupBox4.Location = new System.Drawing.Point(47, 114);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 173);
+            this.groupBox4.TabIndex = 189;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "نوع الاشتراك";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.rbtnEScholarship);
+            this.groupBox5.Controls.Add(this.rbtnESpecialSupport);
+            this.groupBox5.Location = new System.Drawing.Point(6, 104);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(188, 60);
+            this.groupBox5.TabIndex = 135;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "طريقة الاشتراك";
+            // 
+            // rbtnEScholarship
+            // 
+            this.rbtnEScholarship.AutoSize = true;
+            this.rbtnEScholarship.Location = new System.Drawing.Point(6, 37);
+            this.rbtnEScholarship.Name = "rbtnEScholarship";
+            this.rbtnEScholarship.Size = new System.Drawing.Size(46, 17);
+            this.rbtnEScholarship.TabIndex = 2;
+            this.rbtnEScholarship.Tag = "2";
+            this.rbtnEScholarship.Text = "منحة";
+            this.rbtnEScholarship.UseVisualStyleBackColor = true;
+            this.rbtnEScholarship.CheckedChanged += new System.EventHandler(this.RadioButton_SubscriptionWay_CheckedChanged);
+            // 
+            // rbtnESpecialSupport
+            // 
+            this.rbtnESpecialSupport.AutoSize = true;
+            this.rbtnESpecialSupport.Location = new System.Drawing.Point(115, 37);
+            this.rbtnESpecialSupport.Name = "rbtnESpecialSupport";
+            this.rbtnESpecialSupport.Size = new System.Drawing.Size(67, 17);
+            this.rbtnESpecialSupport.TabIndex = 3;
+            this.rbtnESpecialSupport.Tag = "1";
+            this.rbtnESpecialSupport.Text = "دعم خاص";
+            this.rbtnESpecialSupport.UseVisualStyleBackColor = true;
+            this.rbtnESpecialSupport.CheckedChanged += new System.EventHandler(this.RadioButton_SubscriptionWay_CheckedChanged);
+            // 
+            // rbtnExpertSpecial
+            // 
+            this.rbtnExpertSpecial.AutoSize = true;
+            this.rbtnExpertSpecial.Location = new System.Drawing.Point(6, 29);
+            this.rbtnExpertSpecial.Name = "rbtnExpertSpecial";
+            this.rbtnExpertSpecial.Size = new System.Drawing.Size(44, 17);
+            this.rbtnExpertSpecial.TabIndex = 2;
+            this.rbtnExpertSpecial.Tag = "3";
+            this.rbtnExpertSpecial.Text = "مميز";
+            this.rbtnExpertSpecial.UseVisualStyleBackColor = true;
+            this.rbtnExpertSpecial.CheckedChanged += new System.EventHandler(this.RadioButton_SubscriptionType_CheckedChanged);
+            // 
+            // rbtnExpertMedium
+            // 
+            this.rbtnExpertMedium.AutoSize = true;
+            this.rbtnExpertMedium.Location = new System.Drawing.Point(139, 77);
+            this.rbtnExpertMedium.Name = "rbtnExpertMedium";
+            this.rbtnExpertMedium.Size = new System.Drawing.Size(56, 17);
+            this.rbtnExpertMedium.TabIndex = 1;
+            this.rbtnExpertMedium.Tag = "2";
+            this.rbtnExpertMedium.Text = "متوسط";
+            this.rbtnExpertMedium.UseVisualStyleBackColor = true;
+            this.rbtnExpertMedium.CheckedChanged += new System.EventHandler(this.RadioButton_SubscriptionType_CheckedChanged);
+            // 
+            // rbtnExpertFree
+            // 
+            this.rbtnExpertFree.AutoSize = true;
+            this.rbtnExpertFree.Location = new System.Drawing.Point(139, 29);
+            this.rbtnExpertFree.Name = "rbtnExpertFree";
+            this.rbtnExpertFree.Size = new System.Drawing.Size(55, 17);
+            this.rbtnExpertFree.TabIndex = 0;
+            this.rbtnExpertFree.Tag = "1";
+            this.rbtnExpertFree.Text = "مجاني";
+            this.rbtnExpertFree.UseVisualStyleBackColor = true;
+            this.rbtnExpertFree.CheckedChanged += new System.EventHandler(this.RadioButton_SubscriptionType_CheckedChanged);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(374, 588);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 47);
+            this.button1.TabIndex = 188;
+            this.button1.Text = "اضافة الى القائمة المغلقة";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Red;
+            this.button2.Location = new System.Drawing.Point(564, 588);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(141, 47);
+            this.button2.TabIndex = 187;
+            this.button2.Text = "اضافة الى القائمة البيضاء";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Red;
+            this.button3.Location = new System.Drawing.Point(746, 588);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(141, 47);
+            this.button3.TabIndex = 186;
+            this.button3.Text = "اضافة الى القائمة السوداء";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.Red;
+            this.button4.Location = new System.Drawing.Point(935, 513);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(64, 28);
+            this.button4.TabIndex = 185;
+            this.button4.Text = "اعادة";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(908, 563);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(19, 20);
+            this.label7.TabIndex = 184;
+            this.label7.Text = "0";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(935, 563);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(85, 20);
+            this.label11.TabIndex = 183;
+            this.label11.Text = "عدد القضايا:";
+            // 
+            // clbExpertCasesTypes
+            // 
+            this.clbExpertCasesTypes.CheckOnClick = true;
+            this.clbExpertCasesTypes.ContextMenuStrip = this.cms;
+            this.clbExpertCasesTypes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clbExpertCasesTypes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clbExpertCasesTypes.ForeColor = System.Drawing.Color.Red;
+            this.clbExpertCasesTypes.FormattingEnabled = true;
+            this.clbExpertCasesTypes.Location = new System.Drawing.Point(375, 176);
+            this.clbExpertCasesTypes.Name = "clbExpertCasesTypes";
+            this.clbExpertCasesTypes.Size = new System.Drawing.Size(513, 365);
+            this.clbExpertCasesTypes.TabIndex = 181;
+            this.clbExpertCasesTypes.Validating += new System.ComponentModel.CancelEventHandler(this.clbExpertCasesTypes_Validating);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.ForeColor = System.Drawing.Color.Red;
+            this.checkBox1.Location = new System.Drawing.Point(838, 547);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(49, 17);
+            this.checkBox1.TabIndex = 182;
+            this.checkBox1.Text = "فعال";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(852, 114);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(39, 20);
+            this.label13.TabIndex = 180;
+            this.label13.Text = "???";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::AADL.Properties.Resources.List_32;
+            this.pictureBox9.Location = new System.Drawing.Point(971, 176);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(31, 26);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 179;
+            this.pictureBox9.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(1090, 110);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(99, 20);
+            this.label15.TabIndex = 177;
+            this.label15.Text = "الرقم التعريفي:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(1090, 176);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(97, 20);
+            this.label16.TabIndex = 176;
+            this.label16.Text = "انواع القضايا:";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::AADL.Properties.Resources.PersonDetails_32;
+            this.pictureBox10.Location = new System.Drawing.Point(971, 114);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(31, 26);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 178;
+            this.pictureBox10.TabStop = false;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblTitle.Location = new System.Drawing.Point(-1, 9);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(1385, 39);
+            this.lblTitle.TabIndex = 119;
+            this.lblTitle.Text = "تعديل الطلب";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnClose
+            // 
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::AADL.Properties.Resources.Close_32;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.Location = new System.Drawing.Point(551, 967);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(135, 34);
+            this.btnClose.TabIndex = 120;
+            this.btnClose.Text = "اغلاق";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Enabled = false;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.Image = global::AADL.Properties.Resources.Save_32;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.Location = new System.Drawing.Point(716, 967);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(135, 34);
+            this.btnSave.TabIndex = 121;
+            this.btnSave.Text = "حفظ";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // gbAdditionType
+            // 
+            this.gbAdditionType.Controls.Add(this.cbAddSharia);
+            this.gbAdditionType.Controls.Add(this.cbAddExpert);
+            this.gbAdditionType.Controls.Add(this.cbAddJudger);
+            this.gbAdditionType.Controls.Add(this.cbAddRegulator);
+            this.gbAdditionType.Location = new System.Drawing.Point(78, 78);
+            this.gbAdditionType.Name = "gbAdditionType";
+            this.gbAdditionType.Size = new System.Drawing.Size(200, 100);
+            this.gbAdditionType.TabIndex = 122;
+            this.gbAdditionType.TabStop = false;
+            this.gbAdditionType.Text = "نوع الاضافة او التعديل";
+            // 
+            // cbAddSharia
+            // 
+            this.cbAddSharia.AutoSize = true;
+            this.cbAddSharia.Location = new System.Drawing.Point(134, 72);
+            this.cbAddSharia.Name = "cbAddSharia";
+            this.cbAddSharia.Size = new System.Drawing.Size(60, 17);
+            this.cbAddSharia.TabIndex = 3;
+            this.cbAddSharia.Tag = "2";
+            this.cbAddSharia.Text = " شرعي";
+            this.cbAddSharia.UseVisualStyleBackColor = true;
+            this.cbAddSharia.CheckedChanged += new System.EventHandler(this.cbAdd_CheckedChanged);
+            // 
+            // cbAddExpert
+            // 
+            this.cbAddExpert.AutoSize = true;
+            this.cbAddExpert.Location = new System.Drawing.Point(16, 72);
+            this.cbAddExpert.Name = "cbAddExpert";
+            this.cbAddExpert.Size = new System.Drawing.Size(46, 17);
+            this.cbAddExpert.TabIndex = 2;
+            this.cbAddExpert.Tag = "4";
+            this.cbAddExpert.Text = "خبير";
+            this.cbAddExpert.UseVisualStyleBackColor = true;
+            this.cbAddExpert.CheckedChanged += new System.EventHandler(this.cbAdd_CheckedChanged);
+            // 
+            // cbAddJudger
+            // 
+            this.cbAddJudger.AutoSize = true;
+            this.cbAddJudger.Location = new System.Drawing.Point(16, 27);
+            this.cbAddJudger.Name = "cbAddJudger";
+            this.cbAddJudger.Size = new System.Drawing.Size(50, 17);
+            this.cbAddJudger.TabIndex = 1;
+            this.cbAddJudger.Tag = "3";
+            this.cbAddJudger.Text = "محكم";
+            this.cbAddJudger.UseVisualStyleBackColor = true;
+            this.cbAddJudger.CheckedChanged += new System.EventHandler(this.cbAdd_CheckedChanged);
+            // 
+            // cbAddRegulator
+            // 
+            this.cbAddRegulator.AutoSize = true;
+            this.cbAddRegulator.Location = new System.Drawing.Point(135, 27);
+            this.cbAddRegulator.Name = "cbAddRegulator";
+            this.cbAddRegulator.Size = new System.Drawing.Size(59, 17);
+            this.cbAddRegulator.TabIndex = 0;
+            this.cbAddRegulator.Tag = "1";
+            this.cbAddRegulator.Text = " نظامي";
+            this.cbAddRegulator.UseVisualStyleBackColor = true;
+            this.cbAddRegulator.CheckedChanged += new System.EventHandler(this.cbAdd_CheckedChanged);
+            // 
+            // ctrlPersonCardWithFilter1
+            // 
+            this.ctrlPersonCardWithFilter1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ctrlPersonCardWithFilter1.FilterEnabled = true;
+            this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(163, 21);
+            this.ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
+            this.ctrlPersonCardWithFilter1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ctrlPersonCardWithFilter1.ShowAddPerson = true;
+            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(1067, 725);
+            this.ctrlPersonCardWithFilter1.TabIndex = 120;
+            // 
             // frmAddUpdatePractitioner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1231,9 +1484,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.gbAdditionType.ResumeLayout(false);
-            this.gbAdditionType.PerformLayout();
             this.tpJudgerInfo.ResumeLayout(false);
             this.tpJudgerInfo.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1242,6 +1492,17 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.tpExpertInfo.ResumeLayout(false);
+            this.tpExpertInfo.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.gbAdditionType.ResumeLayout(false);
+            this.gbAdditionType.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1300,9 +1561,6 @@
         private System.Windows.Forms.CheckedListBox clbShariaCasesTypes;
         private System.Windows.Forms.CheckBox chkShariaIsActive;
         private System.Windows.Forms.Label lblShariaID;
-        private System.Windows.Forms.Button btnToPersonalPrevious;
-        private System.Windows.Forms.Button btnToShariaNext;
-        private System.Windows.Forms.Button btnToRegulatorPrevious;
         private System.Windows.Forms.GroupBox gbAdditionType;
         private System.Windows.Forms.CheckBox cbAddRegulator;
         private System.Windows.Forms.CheckBox cbAddSharia;
@@ -1335,5 +1593,26 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.TabPage tpExpertInfo;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.RadioButton rbtnEScholarship;
+        private System.Windows.Forms.RadioButton rbtnESpecialSupport;
+        private System.Windows.Forms.RadioButton rbtnExpertSpecial;
+        private System.Windows.Forms.RadioButton rbtnExpertMedium;
+        private System.Windows.Forms.RadioButton rbtnExpertFree;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckedListBox clbExpertCasesTypes;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }
