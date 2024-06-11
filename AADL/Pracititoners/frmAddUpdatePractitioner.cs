@@ -543,6 +543,7 @@ namespace AADL.Regulators
             ctbRegulatoryMemberShipNumber.Text = "";
             chkRegulatorIsActive.Checked = true;
             rbtnRegulatoryFree.Checked = true;
+            rbtnRScholarship.Checked = true;
             lbRegulatoryCasesRecord.Text = "0";
             _RegulatorMode = enMode.AddNew;
             cbAddRegulator.Checked = false;
@@ -563,7 +564,6 @@ namespace AADL.Regulators
         }
         private void _ResetJudgerInfo()
         {
-            //Reset - juder Info.
             _Judger = new clsJudger();
             _JudgerMode = enMode.AddNew;
             chkJudgerIsActive.Checked = true;

@@ -17,6 +17,7 @@ namespace AADLBusiness
 
         public string Email { get; set; }
 
+        public bool ?IsLawyer {  get; set; }
         public int? SubscriptionTypeID { get; set; }
 
         public int? SubscriptionWayID { get; set; }
@@ -32,6 +33,8 @@ namespace AADLBusiness
 
         public DateTime? RegulatorIssueDate { get; set; }
         public DateTime? ShariaIssueDate { get; set; }
+        public DateTime? JudgerIssueDate { get; set; }
+        public DateTime? ExpertIssueDate { get; set; }
 
         public DateTime? RegulatorIssueDateFrom { get; set; }
         public DateTime? RegulatorIssueDateTo { get; set; }
@@ -39,56 +42,113 @@ namespace AADLBusiness
         public DateTime? ShariaIssueDateFrom { get; set; }
         public DateTime? ShariaIssueDateTo { get; set; }
 
+        public DateTime? JudgerIssueDateFrom { get; set; }
+        public DateTime? JudgerIssueDateTo { get; set; }
+
+        public DateTime? ExpertIssueDateFrom { get; set; }
+        public DateTime? ExpertIssueDateTo { get; set; }
+
 
         public bool? IsPractitionerInBlackList { get; set; }
-        public bool? IsInRegulatoryWhiteList { get; set; }
-        public bool? IsInRegulatoryClosedList { get; set; }
-        public bool? IsInShariaWhiteList { get; set; }
-        public bool? IsInShariaClosedList { get; set; }
 
-        public string ShariaCreatedByUserName { get; set; }
+        public bool? IsRegulatoryInWhiteList { get; set; }
+        public bool? IsRegulatoryInClosedList { get; set; }
+
+        public bool? IsShariaInWhiteList { get; set; }
+        public bool? IsShariaInClosedList { get; set; }
+
+        public bool? IsJudgerInWhiteList { get; set; }
+        public bool? IsJudgerInClosedList { get; set; }
+
+
+        public bool? IsExpertInWhiteList { get; set; }
+        public bool? IsExpertInClosedList { get; set; }
+
         public string RegulatorCreatedByUserName { get; set; }
+        public string ShariaCreatedByUserName { get; set; }
+        public string JudgerCreatedByUserName { get; set; }
+        public string ExpertCreatedByUserName { get; set; }
 
-        public AdvancedSearchPractitionerProperties() {
-        
-
+         public AdvancedSearchPractitionerProperties() {
         }
-        public AdvancedSearchPractitionerProperties(string fullName,
-      string phoneNumber, string email, int? subscriptionTypeID, int? subscriptionWayID,
-      bool? isRegulatorActive, bool? isShariaActive, bool? isExpertActive, bool? isJudgerActive,
-      string memberShipNumber, string shariaLicenseNumber, DateTime? regulatorIssueDate, DateTime? shariaIssueDate,
-      DateTime? regulatorIssueDateFrom, DateTime? regulatorIssueDateTo, DateTime? shariaIssueDateFrom,
-      DateTime? shariaIssueDateTo, bool? isPractitionerInBlackList, bool? isInRegulatoryWhiteList, bool? isInRegulatoryClosedList,
-      bool? isInShariaWhiteList, bool? isInShariaClosedList, string RegulatorCreatedByUserName, string ShariaCreatedByUserName)
-        {
+     
+         public AdvancedSearchPractitionerProperties(string fullName,
+         string phoneNumber, string email, bool? IsLawyer,int? subscriptionTypeID, int? subscriptionWayID,
+         bool? isRegulatorActive, bool? isShariaActive, bool? isExpertActive, bool? isJudgerActive,
+         string memberShipNumber, string shariaLicenseNumber, 
+         DateTime? regulatorIssueDate, DateTime? shariaIssueDate,
+         DateTime? JudgerIssueDate, DateTime? ExpertIssueDate,
+         DateTime? regulatorIssueDateFrom, DateTime? regulatorIssueDateTo,
+         DateTime? shariaIssueDateFrom,DateTime? shariaIssueDateTo,
+         DateTime? JudgerIssueDateFrom, DateTime? JudgerIssueDateTo,
+         DateTime? ExpertIssueDateFrom, DateTime? ExpertIssueDateTo,
+         bool? isPractitionerInBlackList, bool? isRegulatoryInWhiteList, bool? isRegulatoryInClosedList,
+         bool? isShariaInWhiteList, bool? isShariaInClosedList,
+          bool? isJudgerInWhiteList, 
+          bool? isJudgerInClosedList,
+          bool? isExpertInWhiteList,
+          bool? isExpertInClosedList,
+         string RegulatorCreatedByUserName, 
+         string ShariaCreatedByUserName,
+         string JudgerCreatedByUserName,string ExpertCreatedByUserName
+         )
+         {
+          
             this.FullName = fullName;
             this.PhoneNumber = phoneNumber;
             this.Email = email;
-            this.SubscriptionTypeID = subscriptionTypeID;
+          
+            this.IsLawyer = IsLawyer;
+            
+            this.SubscriptionTypeID = subscriptionTypeID; 
             this.SubscriptionWayID = subscriptionWayID;
+       
             this.IsRegulatorActive = isRegulatorActive;
             this.IsShariaActive = isShariaActive;
             this.IsExpertActive = isExpertActive;
             this.IsJudgerActive = isJudgerActive;
+          
             this.MemberShipNumber = memberShipNumber;
             this.ShariaLicenseNumber = shariaLicenseNumber;
+            
             this.RegulatorIssueDate = regulatorIssueDate;
             this.ShariaIssueDate = shariaIssueDate;
+            this.JudgerIssueDate = JudgerIssueDate;
+            this.ExpertIssueDate = ExpertIssueDate;
+
             this.RegulatorIssueDateFrom = regulatorIssueDateFrom;
             this.RegulatorIssueDateTo = regulatorIssueDateTo;
+           
             this.ShariaIssueDateFrom = shariaIssueDateFrom;
             this.ShariaIssueDateTo = shariaIssueDateTo;
+
+            this.JudgerIssueDateFrom =JudgerIssueDateFrom;
+            this.JudgerIssueDateTo   =JudgerIssueDateTo;
+            
+            this.ExpertIssueDateFrom = ExpertIssueDateFrom;
+            this.ExpertIssueDateTo = ExpertIssueDateTo;     
+         
             this.IsPractitionerInBlackList = isPractitionerInBlackList;
-            this.IsInRegulatoryWhiteList = isInRegulatoryWhiteList;
-            this.IsInRegulatoryClosedList = isInRegulatoryClosedList;
-            this.IsInShariaWhiteList = isInShariaWhiteList;
-            this.IsInShariaClosedList = isInShariaClosedList;
+          
+            this.IsRegulatoryInWhiteList = isRegulatoryInWhiteList;
+            this.IsRegulatoryInClosedList = IsRegulatoryInClosedList;
+        
+            this.IsShariaInWhiteList = IsShariaInWhiteList;
+            this.IsShariaInClosedList = IsShariaInClosedList;
+
+            this.IsJudgerInWhiteList = IsJudgerInWhiteList;
+            this.IsJudgerInClosedList = IsJudgerInClosedList;
+
             this.RegulatorCreatedByUserName = RegulatorCreatedByUserName;
             this.ShariaCreatedByUserName = ShariaCreatedByUserName;
+            this.JudgerCreatedByUserName = ShariaCreatedByUserName;
+            this.ExpertCreatedByUserName = ShariaCreatedByUserName;
 
-        }
 
+         }
+    
     }
+
     public class clsHelperClasses
     {
         public static bool WriteEventToLogFile(string Message, EventLogEntryType eventLogEntryType)
@@ -133,6 +193,5 @@ namespace AADLBusiness
 
 
     }
-
 
 }

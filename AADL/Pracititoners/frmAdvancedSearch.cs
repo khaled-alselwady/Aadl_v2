@@ -133,12 +133,12 @@ namespace AADL.Pracititoners
             InitializeDateTimePicker(dtpShariaIssueDateFrom, cbEnableShariaFromDate);
             InitializeDateTimePicker(dtpShariaIssueDateTo, cbEnableShariaToDate);
 
-            InitializeDateTimePicker(dateTimePicker1, checkBox1);
-            InitializeDateTimePicker(dateTimePicker2, checkBox2);
-            InitializeDateTimePicker(dateTimePicker3, checkBox3);
-            InitializeDateTimePicker(dateTimePicker4, checkBox4);
-            InitializeDateTimePicker(dateTimePicker5, checkBox5);
-            InitializeDateTimePicker(dateTimePicker6, checkBox6);
+            InitializeDateTimePicker(dtpJudgerIssueDateTo, cbEnableJudgerToDate);
+            InitializeDateTimePicker(dtpJudgerIssueDateFrom, cbEnableJudgerFromDate);
+            InitializeDateTimePicker(dtpJudgerIssueDate, cbEnableJudgerIssueDate);
+            InitializeDateTimePicker(dtpExpertIssueDateTo, cbEnableExpertToDate);
+            InitializeDateTimePicker(dtpExpertIssueDateFrom, cbEnableExpertFromDate);
+            InitializeDateTimePicker(dtpExpertIssueDate, cbEnableExpertIssueDate);
 
 
 
@@ -211,35 +211,35 @@ namespace AADL.Pracititoners
 
                         break;
                     }
+                case clsPractitioner.enPractitionerType.Judger:
+                    {
 
-                    //case clsPractitioner.enPractitionerType.Expert:
-                    //    {
+                        if (rbtnIsJudgerActiveNo.Checked)
+                        {
+                            return false;
+                        }
+                        else if (rbtnIsJudgerActiveYes.Checked)
+                        {
+                            return true;
+                        }
+                        else
+                            return null;
+                    }
 
-                    //        if (rbtnIsExpertActiveNo.Checked)
-                    //        {
-                    //            return false;
-                    //        }
-                    //        else if (rbtnIsExpertActiveYes.Checked)
-                    //        {
-                    //            return true;
-                    //        }
-                    //        else
-                    //            return null;
-                    //    }
-                    //case clsPractitioner.enPractitionerType.Judger:
-                    //    {
+                case clsPractitioner.enPractitionerType.Expert:
+                    {
 
-                    //        if (rbtnIsJudgerActiveNo.Checked)
-                    //        {
-                    //            return false;
-                    //        }
-                    //        else if (rbtnIsJudgerActiveYes.Checked)
-                    //        {
-                    //            return true;
-                    //        }
-                    //        else
-                    //            return null;
-                    //    }
+                        if (rbtnIsExpertActiveNo.Checked)
+                        {
+                            return false;
+                        }
+                        else if (rbtnIsExpertActiveYes.Checked)
+                        {
+                            return true;
+                        }
+                        else
+                            return null;
+                    }
 
             }
 
@@ -341,7 +341,85 @@ namespace AADL.Pracititoners
                         break;
 
                     }
+
+                case clsList.enListType.JudgerWhite:
+                    {
+
+                        //3 case yes , no ,nothing 
+                        if (rbtnIsJudgerWhiteListYes.Checked)
+                        {
+                            return true;
+
+                        }
+
+                        else if (rbtnIsJudgerWhiteListNo.Checked)
+                        {
+                            return false;
+
+                        }
+
+                        break;
+
+                    }
+
+                case clsList.enListType.JudgerClosed:
+                    {
+
+                        if (rbtnIsJudgerClosedListYes.Checked)
+                        {
+                            return true;
+
+                        }
+
+                        else if (rbtnIsJudgerClosedListNo.Checked)
+                        {
+                            return false;
+
+                        }
+
+                        break;
+
+                    }
                
+                case clsList.enListType.ExpertWhite:
+                    {
+
+                        //3 case yes , no ,nothing 
+                        if (rbtnIsExpertWhiteListYes.Checked)
+                        {
+                            return true;
+
+                        }
+
+                        else if (rbtnIsExpertWhiteListNo.Checked)
+                        {
+                            return false;
+
+                        }
+
+                        break;
+
+                    }
+
+                case clsList.enListType.ExpertClosed:
+                    {
+
+                        if (rbtnIsExpertClosedListYes.Checked)
+                        {
+                            return true;
+
+                        }
+
+                        else if (rbtnIsExpertClosedListNo.Checked)
+                        {
+                            return false;
+
+                        }
+
+                        break;
+
+                    }
+          
             }
 
             return null;
@@ -365,8 +443,8 @@ namespace AADL.Pracititoners
             _advancedSearchPractitionerProperties.RegulatorIssueDateTo = (int)dtpRegulatorIssueDateTo.Tag == 0 ? (DateTime?)null : dtpRegulatorIssueDateTo.Value.Date;
             _advancedSearchPractitionerProperties.RegulatorCreatedByUserName = string.IsNullOrWhiteSpace(mtbRegulatorCreatedByUserName.Text) ?
                 "" : mtbRegulatorCreatedByUserName.Text;
-            _advancedSearchPractitionerProperties.IsInRegulatoryWhiteList = IsPractitionerInList(clsList.enListType.RegulatoryWhite);
-            _advancedSearchPractitionerProperties.IsInRegulatoryClosedList = IsPractitionerInList(clsList.enListType.RegulatoryClosed);
+            _advancedSearchPractitionerProperties.IsRegulatoryInWhiteList = IsPractitionerInList(clsList.enListType.RegulatoryWhite);
+            _advancedSearchPractitionerProperties.IsRegulatoryInClosedList = IsPractitionerInList(clsList.enListType.RegulatoryClosed);
 
         }
         private void AssignShariaInfo()
@@ -379,8 +457,25 @@ namespace AADL.Pracititoners
             _advancedSearchPractitionerProperties.ShariaIssueDateTo = (int)dtpShariaIssueDateTo.Tag == 0 ? (DateTime?)null : dtpShariaIssueDateTo.Value.Date;
             _advancedSearchPractitionerProperties.ShariaCreatedByUserName = string.IsNullOrWhiteSpace(mtbShariaCreatedByUserName.Text) ?
                 "" : mtbShariaCreatedByUserName.Text;
-            _advancedSearchPractitionerProperties.IsInShariaWhiteList = IsPractitionerInList(clsList.enListType.ShariaWhite);
-            _advancedSearchPractitionerProperties.IsInShariaClosedList = IsPractitionerInList(clsList.enListType.ShariaClosed);
+            _advancedSearchPractitionerProperties.IsShariaInWhiteList = IsPractitionerInList(clsList.enListType.ShariaWhite);
+            _advancedSearchPractitionerProperties.IsShariaInClosedList = IsPractitionerInList(clsList.enListType.ShariaClosed);
+
+        }
+        private void AssignJudgerInfo()
+        {
+        
+            _advancedSearchPractitionerProperties.IsJudgerActive = IsPractitionerActive(clsPractitioner.enPractitionerType.Judger);
+            _advancedSearchPractitionerProperties.JudgerIssueDate = (int)dtpShariaIssueDate.Tag == 0 ? (DateTime?)null : dtpJudgerIssueDate.Value.Date;
+            _advancedSearchPractitionerProperties.JudgerIssueDateFrom = (int)dtpShariaIssueDateFrom.Tag == 0 ? (DateTime?)null : dtpJudgerIssueDateFrom.Value.Date;
+            _advancedSearchPractitionerProperties.JudgerIssueDateTo = (int)dtpShariaIssueDateTo.Tag == 0 ? (DateTime?)null : dtpJudgerIssueDateTo.Value.Date;
+            _advancedSearchPractitionerProperties.JudgerCreatedByUserName = string.IsNullOrWhiteSpace(mtbJudgerCreatedByUserName.Text) ?
+                "" : mtbJudgerCreatedByUserName.Text;
+            _advancedSearchPractitionerProperties.IsJudgerInWhiteList = IsPractitionerInList(clsList.enListType.ShariaWhite);
+            _advancedSearchPractitionerProperties.IsJudgerInClosedList = IsPractitionerInList(clsList.enListType.ShariaClosed);
+        
+        }
+        private void AssignExpertInfo()
+        {
 
         }
         private int? GetSubscriptionTypeID()

@@ -30,47 +30,47 @@
         {
             this.gpAdvnacedSearch = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.cbEnableExpertToDate = new System.Windows.Forms.CheckBox();
+            this.cbEnableExpertFromDate = new System.Windows.Forms.CheckBox();
+            this.cbEnableExpertIssueDate = new System.Windows.Forms.CheckBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.rbtnIsExpertClosedListNo = new System.Windows.Forms.RadioButton();
+            this.rbtnIsExpertClosedListYes = new System.Windows.Forms.RadioButton();
             this.label29 = new System.Windows.Forms.Label();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
+            this.rbtnIsExpertWhiteListNo = new System.Windows.Forms.RadioButton();
+            this.rbtnIsExpertWhiteListYes = new System.Windows.Forms.RadioButton();
+            this.dtpExpertIssueDateTo = new System.Windows.Forms.DateTimePicker();
+            this.dtpExpertIssueDateFrom = new System.Windows.Forms.DateTimePicker();
             this.label30 = new System.Windows.Forms.Label();
-            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
+            this.dtpExpertIssueDate = new System.Windows.Forms.DateTimePicker();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.rbtnIsExpertActiveNo = new System.Windows.Forms.RadioButton();
+            this.rbtnIsExpertActiveYes = new System.Windows.Forms.RadioButton();
             this.label34 = new System.Windows.Forms.Label();
-            this.myCustomControlTextBox2 = new myControlLibrary.myCustomControlTextBox();
+            this.mtbExpertCreatedByUserName = new myControlLibrary.myCustomControlTextBox();
             this.gbExperts = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbEnableJudgerToDate = new System.Windows.Forms.CheckBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.cbEnableJudgerFromDate = new System.Windows.Forms.CheckBox();
+            this.cbEnableJudgerIssueDate = new System.Windows.Forms.CheckBox();
+            this.rbtnIsJudgerClosedListNo = new System.Windows.Forms.RadioButton();
+            this.rbtnIsJudgerClosedListYes = new System.Windows.Forms.RadioButton();
             this.label22 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.rbtnIsJudgerWhiteListNo = new System.Windows.Forms.RadioButton();
+            this.rbtnIsJudgerWhiteListYes = new System.Windows.Forms.RadioButton();
+            this.dtpJudgerIssueDateTo = new System.Windows.Forms.DateTimePicker();
+            this.dtpJudgerIssueDateFrom = new System.Windows.Forms.DateTimePicker();
             this.label23 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dtpJudgerIssueDate = new System.Windows.Forms.DateTimePicker();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.rbtnIsJudgerActiveNo = new System.Windows.Forms.RadioButton();
+            this.rbtnIsJudgerActiveYes = new System.Windows.Forms.RadioButton();
             this.label27 = new System.Windows.Forms.Label();
-            this.myCustomControlTextBox1 = new myControlLibrary.myCustomControlTextBox();
+            this.mtbJudgerCreatedByUserName = new myControlLibrary.myCustomControlTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cbEnableShariaToDate = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -161,26 +161,26 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.checkBox4);
-            this.groupBox4.Controls.Add(this.checkBox5);
-            this.groupBox4.Controls.Add(this.checkBox6);
+            this.groupBox4.Controls.Add(this.cbEnableExpertToDate);
+            this.groupBox4.Controls.Add(this.cbEnableExpertFromDate);
+            this.groupBox4.Controls.Add(this.cbEnableExpertIssueDate);
             this.groupBox4.Controls.Add(this.label28);
-            this.groupBox4.Controls.Add(this.radioButton7);
-            this.groupBox4.Controls.Add(this.radioButton8);
+            this.groupBox4.Controls.Add(this.rbtnIsExpertClosedListNo);
+            this.groupBox4.Controls.Add(this.rbtnIsExpertClosedListYes);
             this.groupBox4.Controls.Add(this.label29);
-            this.groupBox4.Controls.Add(this.radioButton9);
-            this.groupBox4.Controls.Add(this.radioButton10);
-            this.groupBox4.Controls.Add(this.dateTimePicker4);
-            this.groupBox4.Controls.Add(this.dateTimePicker5);
+            this.groupBox4.Controls.Add(this.rbtnIsExpertWhiteListNo);
+            this.groupBox4.Controls.Add(this.rbtnIsExpertWhiteListYes);
+            this.groupBox4.Controls.Add(this.dtpExpertIssueDateTo);
+            this.groupBox4.Controls.Add(this.dtpExpertIssueDateFrom);
             this.groupBox4.Controls.Add(this.label30);
-            this.groupBox4.Controls.Add(this.dateTimePicker6);
+            this.groupBox4.Controls.Add(this.dtpExpertIssueDate);
             this.groupBox4.Controls.Add(this.label31);
             this.groupBox4.Controls.Add(this.label32);
             this.groupBox4.Controls.Add(this.label33);
-            this.groupBox4.Controls.Add(this.radioButton11);
-            this.groupBox4.Controls.Add(this.radioButton12);
+            this.groupBox4.Controls.Add(this.rbtnIsExpertActiveNo);
+            this.groupBox4.Controls.Add(this.rbtnIsExpertActiveYes);
             this.groupBox4.Controls.Add(this.label34);
-            this.groupBox4.Controls.Add(this.myCustomControlTextBox2);
+            this.groupBox4.Controls.Add(this.mtbExpertCreatedByUserName);
             this.groupBox4.Location = new System.Drawing.Point(11, 233);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(336, 458);
@@ -188,35 +188,35 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "محكم";
             // 
-            // checkBox4
+            // cbEnableExpertToDate
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(166, 278);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 173;
-            this.checkBox4.Tag = "12";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.cbEnableExpertToDate.AutoSize = true;
+            this.cbEnableExpertToDate.Location = new System.Drawing.Point(166, 278);
+            this.cbEnableExpertToDate.Name = "cbEnableExpertToDate";
+            this.cbEnableExpertToDate.Size = new System.Drawing.Size(15, 14);
+            this.cbEnableExpertToDate.TabIndex = 173;
+            this.cbEnableExpertToDate.Tag = "12";
+            this.cbEnableExpertToDate.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // cbEnableExpertFromDate
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(166, 223);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(15, 14);
-            this.checkBox5.TabIndex = 172;
-            this.checkBox5.Tag = "11";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.cbEnableExpertFromDate.AutoSize = true;
+            this.cbEnableExpertFromDate.Location = new System.Drawing.Point(166, 223);
+            this.cbEnableExpertFromDate.Name = "cbEnableExpertFromDate";
+            this.cbEnableExpertFromDate.Size = new System.Drawing.Size(15, 14);
+            this.cbEnableExpertFromDate.TabIndex = 172;
+            this.cbEnableExpertFromDate.Tag = "11";
+            this.cbEnableExpertFromDate.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // cbEnableExpertIssueDate
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(166, 165);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(15, 14);
-            this.checkBox6.TabIndex = 171;
-            this.checkBox6.Tag = "10";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.cbEnableExpertIssueDate.AutoSize = true;
+            this.cbEnableExpertIssueDate.Location = new System.Drawing.Point(166, 165);
+            this.cbEnableExpertIssueDate.Name = "cbEnableExpertIssueDate";
+            this.cbEnableExpertIssueDate.Size = new System.Drawing.Size(15, 14);
+            this.cbEnableExpertIssueDate.TabIndex = 171;
+            this.cbEnableExpertIssueDate.Tag = "10";
+            this.cbEnableExpertIssueDate.UseVisualStyleBackColor = true;
             // 
             // label28
             // 
@@ -228,27 +228,27 @@
             this.label28.TabIndex = 170;
             this.label28.Text = "القائمة المغلقة";
             // 
-            // radioButton7
+            // rbtnIsExpertClosedListNo
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(148, 414);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(31, 17);
-            this.radioButton7.TabIndex = 169;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "لا";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rbtnIsExpertClosedListNo.AutoSize = true;
+            this.rbtnIsExpertClosedListNo.Location = new System.Drawing.Point(148, 414);
+            this.rbtnIsExpertClosedListNo.Name = "rbtnIsExpertClosedListNo";
+            this.rbtnIsExpertClosedListNo.Size = new System.Drawing.Size(31, 17);
+            this.rbtnIsExpertClosedListNo.TabIndex = 169;
+            this.rbtnIsExpertClosedListNo.TabStop = true;
+            this.rbtnIsExpertClosedListNo.Text = "لا";
+            this.rbtnIsExpertClosedListNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // rbtnIsExpertClosedListYes
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(1, 415);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(40, 17);
-            this.radioButton8.TabIndex = 168;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "نعم";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.rbtnIsExpertClosedListYes.AutoSize = true;
+            this.rbtnIsExpertClosedListYes.Location = new System.Drawing.Point(1, 415);
+            this.rbtnIsExpertClosedListYes.Name = "rbtnIsExpertClosedListYes";
+            this.rbtnIsExpertClosedListYes.Size = new System.Drawing.Size(40, 17);
+            this.rbtnIsExpertClosedListYes.TabIndex = 168;
+            this.rbtnIsExpertClosedListYes.TabStop = true;
+            this.rbtnIsExpertClosedListYes.Text = "نعم";
+            this.rbtnIsExpertClosedListYes.UseVisualStyleBackColor = true;
             // 
             // label29
             // 
@@ -260,43 +260,43 @@
             this.label29.TabIndex = 167;
             this.label29.Text = "القائمة البيضاء ";
             // 
-            // radioButton9
+            // rbtnIsExpertWhiteListNo
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(150, 360);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(31, 17);
-            this.radioButton9.TabIndex = 166;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "لا";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.rbtnIsExpertWhiteListNo.AutoSize = true;
+            this.rbtnIsExpertWhiteListNo.Location = new System.Drawing.Point(150, 360);
+            this.rbtnIsExpertWhiteListNo.Name = "rbtnIsExpertWhiteListNo";
+            this.rbtnIsExpertWhiteListNo.Size = new System.Drawing.Size(31, 17);
+            this.rbtnIsExpertWhiteListNo.TabIndex = 166;
+            this.rbtnIsExpertWhiteListNo.TabStop = true;
+            this.rbtnIsExpertWhiteListNo.Text = "لا";
+            this.rbtnIsExpertWhiteListNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton10
+            // rbtnIsExpertWhiteListYes
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(3, 361);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(40, 17);
-            this.radioButton10.TabIndex = 165;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "نعم";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.rbtnIsExpertWhiteListYes.AutoSize = true;
+            this.rbtnIsExpertWhiteListYes.Location = new System.Drawing.Point(3, 361);
+            this.rbtnIsExpertWhiteListYes.Name = "rbtnIsExpertWhiteListYes";
+            this.rbtnIsExpertWhiteListYes.Size = new System.Drawing.Size(40, 17);
+            this.rbtnIsExpertWhiteListYes.TabIndex = 165;
+            this.rbtnIsExpertWhiteListYes.TabStop = true;
+            this.rbtnIsExpertWhiteListYes.Text = "نعم";
+            this.rbtnIsExpertWhiteListYes.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker4
+            // dtpExpertIssueDateTo
             // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(5, 297);
-            this.dateTimePicker4.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(178, 20);
-            this.dateTimePicker4.TabIndex = 164;
+            this.dtpExpertIssueDateTo.Location = new System.Drawing.Point(5, 297);
+            this.dtpExpertIssueDateTo.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+            this.dtpExpertIssueDateTo.Name = "dtpExpertIssueDateTo";
+            this.dtpExpertIssueDateTo.Size = new System.Drawing.Size(178, 20);
+            this.dtpExpertIssueDateTo.TabIndex = 164;
             // 
-            // dateTimePicker5
+            // dtpExpertIssueDateFrom
             // 
-            this.dateTimePicker5.Location = new System.Drawing.Point(5, 242);
-            this.dateTimePicker5.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(178, 20);
-            this.dateTimePicker5.TabIndex = 162;
+            this.dtpExpertIssueDateFrom.Location = new System.Drawing.Point(5, 242);
+            this.dtpExpertIssueDateFrom.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+            this.dtpExpertIssueDateFrom.Name = "dtpExpertIssueDateFrom";
+            this.dtpExpertIssueDateFrom.Size = new System.Drawing.Size(178, 20);
+            this.dtpExpertIssueDateFrom.TabIndex = 162;
             // 
             // label30
             // 
@@ -308,13 +308,13 @@
             this.label30.TabIndex = 163;
             this.label30.Text = "تاريخ الانشاء الى";
             // 
-            // dateTimePicker6
+            // dtpExpertIssueDate
             // 
-            this.dateTimePicker6.Location = new System.Drawing.Point(5, 184);
-            this.dateTimePicker6.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker6.Name = "dateTimePicker6";
-            this.dateTimePicker6.Size = new System.Drawing.Size(178, 20);
-            this.dateTimePicker6.TabIndex = 161;
+            this.dtpExpertIssueDate.Location = new System.Drawing.Point(5, 184);
+            this.dtpExpertIssueDate.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+            this.dtpExpertIssueDate.Name = "dtpExpertIssueDate";
+            this.dtpExpertIssueDate.Size = new System.Drawing.Size(178, 20);
+            this.dtpExpertIssueDate.TabIndex = 161;
             // 
             // label31
             // 
@@ -346,27 +346,27 @@
             this.label33.TabIndex = 158;
             this.label33.Text = "هل فعال";
             // 
-            // radioButton11
+            // rbtnIsExpertActiveNo
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(152, 80);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(31, 17);
-            this.radioButton11.TabIndex = 157;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "لا";
-            this.radioButton11.UseVisualStyleBackColor = true;
+            this.rbtnIsExpertActiveNo.AutoSize = true;
+            this.rbtnIsExpertActiveNo.Location = new System.Drawing.Point(152, 80);
+            this.rbtnIsExpertActiveNo.Name = "rbtnIsExpertActiveNo";
+            this.rbtnIsExpertActiveNo.Size = new System.Drawing.Size(31, 17);
+            this.rbtnIsExpertActiveNo.TabIndex = 157;
+            this.rbtnIsExpertActiveNo.TabStop = true;
+            this.rbtnIsExpertActiveNo.Text = "لا";
+            this.rbtnIsExpertActiveNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton12
+            // rbtnIsExpertActiveYes
             // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(5, 81);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(40, 17);
-            this.radioButton12.TabIndex = 156;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "نعم";
-            this.radioButton12.UseVisualStyleBackColor = true;
+            this.rbtnIsExpertActiveYes.AutoSize = true;
+            this.rbtnIsExpertActiveYes.Location = new System.Drawing.Point(5, 81);
+            this.rbtnIsExpertActiveYes.Name = "rbtnIsExpertActiveYes";
+            this.rbtnIsExpertActiveYes.Size = new System.Drawing.Size(40, 17);
+            this.rbtnIsExpertActiveYes.TabIndex = 156;
+            this.rbtnIsExpertActiveYes.TabStop = true;
+            this.rbtnIsExpertActiveYes.Text = "نعم";
+            this.rbtnIsExpertActiveYes.UseVisualStyleBackColor = true;
             // 
             // label34
             // 
@@ -378,37 +378,37 @@
             this.label34.TabIndex = 153;
             this.label34.Text = "تم الانشاء من قبل";
             // 
-            // myCustomControlTextBox2
+            // mtbExpertCreatedByUserName
             // 
-            this.myCustomControlTextBox2.InputType = myControlLibrary.myCustomControlTextBox.InputTypeEnum.NumberInput;
-            this.myCustomControlTextBox2.IsRequired = false;
-            this.myCustomControlTextBox2.Location = new System.Drawing.Point(5, 122);
-            this.myCustomControlTextBox2.Name = "myCustomControlTextBox2";
-            this.myCustomControlTextBox2.Size = new System.Drawing.Size(178, 20);
-            this.myCustomControlTextBox2.TabIndex = 155;
+            this.mtbExpertCreatedByUserName.InputType = myControlLibrary.myCustomControlTextBox.InputTypeEnum.NumberInput;
+            this.mtbExpertCreatedByUserName.IsRequired = false;
+            this.mtbExpertCreatedByUserName.Location = new System.Drawing.Point(5, 122);
+            this.mtbExpertCreatedByUserName.Name = "mtbExpertCreatedByUserName";
+            this.mtbExpertCreatedByUserName.Size = new System.Drawing.Size(178, 20);
+            this.mtbExpertCreatedByUserName.TabIndex = 155;
             // 
             // gbExperts
             // 
-            this.gbExperts.Controls.Add(this.checkBox1);
+            this.gbExperts.Controls.Add(this.cbEnableJudgerToDate);
             this.gbExperts.Controls.Add(this.label21);
-            this.gbExperts.Controls.Add(this.checkBox2);
-            this.gbExperts.Controls.Add(this.checkBox3);
-            this.gbExperts.Controls.Add(this.radioButton1);
-            this.gbExperts.Controls.Add(this.radioButton2);
+            this.gbExperts.Controls.Add(this.cbEnableJudgerFromDate);
+            this.gbExperts.Controls.Add(this.cbEnableJudgerIssueDate);
+            this.gbExperts.Controls.Add(this.rbtnIsJudgerClosedListNo);
+            this.gbExperts.Controls.Add(this.rbtnIsJudgerClosedListYes);
             this.gbExperts.Controls.Add(this.label22);
-            this.gbExperts.Controls.Add(this.radioButton3);
-            this.gbExperts.Controls.Add(this.radioButton4);
-            this.gbExperts.Controls.Add(this.dateTimePicker1);
-            this.gbExperts.Controls.Add(this.dateTimePicker2);
+            this.gbExperts.Controls.Add(this.rbtnIsJudgerWhiteListNo);
+            this.gbExperts.Controls.Add(this.rbtnIsJudgerWhiteListYes);
+            this.gbExperts.Controls.Add(this.dtpJudgerIssueDateTo);
+            this.gbExperts.Controls.Add(this.dtpJudgerIssueDateFrom);
             this.gbExperts.Controls.Add(this.label23);
-            this.gbExperts.Controls.Add(this.dateTimePicker3);
+            this.gbExperts.Controls.Add(this.dtpJudgerIssueDate);
             this.gbExperts.Controls.Add(this.label24);
             this.gbExperts.Controls.Add(this.label25);
             this.gbExperts.Controls.Add(this.label26);
-            this.gbExperts.Controls.Add(this.radioButton5);
-            this.gbExperts.Controls.Add(this.radioButton6);
+            this.gbExperts.Controls.Add(this.rbtnIsJudgerActiveNo);
+            this.gbExperts.Controls.Add(this.rbtnIsJudgerActiveYes);
             this.gbExperts.Controls.Add(this.label27);
-            this.gbExperts.Controls.Add(this.myCustomControlTextBox1);
+            this.gbExperts.Controls.Add(this.mtbJudgerCreatedByUserName);
             this.gbExperts.Location = new System.Drawing.Point(369, 233);
             this.gbExperts.Name = "gbExperts";
             this.gbExperts.Size = new System.Drawing.Size(336, 458);
@@ -416,15 +416,15 @@
             this.gbExperts.TabStop = false;
             this.gbExperts.Text = "خبير";
             // 
-            // checkBox1
+            // cbEnableJudgerToDate
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(168, 278);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 173;
-            this.checkBox1.Tag = "9";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbEnableJudgerToDate.AutoSize = true;
+            this.cbEnableJudgerToDate.Location = new System.Drawing.Point(168, 278);
+            this.cbEnableJudgerToDate.Name = "cbEnableJudgerToDate";
+            this.cbEnableJudgerToDate.Size = new System.Drawing.Size(15, 14);
+            this.cbEnableJudgerToDate.TabIndex = 173;
+            this.cbEnableJudgerToDate.Tag = "9";
+            this.cbEnableJudgerToDate.UseVisualStyleBackColor = true;
             // 
             // label21
             // 
@@ -436,47 +436,47 @@
             this.label21.TabIndex = 170;
             this.label21.Text = "القائمة المغلقة";
             // 
-            // checkBox2
+            // cbEnableJudgerFromDate
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(168, 223);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 172;
-            this.checkBox2.Tag = "8";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbEnableJudgerFromDate.AutoSize = true;
+            this.cbEnableJudgerFromDate.Location = new System.Drawing.Point(168, 223);
+            this.cbEnableJudgerFromDate.Name = "cbEnableJudgerFromDate";
+            this.cbEnableJudgerFromDate.Size = new System.Drawing.Size(15, 14);
+            this.cbEnableJudgerFromDate.TabIndex = 172;
+            this.cbEnableJudgerFromDate.Tag = "8";
+            this.cbEnableJudgerFromDate.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // cbEnableJudgerIssueDate
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(168, 164);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 171;
-            this.checkBox3.Tag = "7";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cbEnableJudgerIssueDate.AutoSize = true;
+            this.cbEnableJudgerIssueDate.Location = new System.Drawing.Point(168, 164);
+            this.cbEnableJudgerIssueDate.Name = "cbEnableJudgerIssueDate";
+            this.cbEnableJudgerIssueDate.Size = new System.Drawing.Size(15, 14);
+            this.cbEnableJudgerIssueDate.TabIndex = 171;
+            this.cbEnableJudgerIssueDate.Tag = "7";
+            this.cbEnableJudgerIssueDate.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbtnIsJudgerClosedListNo
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(148, 414);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(31, 17);
-            this.radioButton1.TabIndex = 169;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "لا";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtnIsJudgerClosedListNo.AutoSize = true;
+            this.rbtnIsJudgerClosedListNo.Location = new System.Drawing.Point(148, 414);
+            this.rbtnIsJudgerClosedListNo.Name = "rbtnIsJudgerClosedListNo";
+            this.rbtnIsJudgerClosedListNo.Size = new System.Drawing.Size(31, 17);
+            this.rbtnIsJudgerClosedListNo.TabIndex = 169;
+            this.rbtnIsJudgerClosedListNo.TabStop = true;
+            this.rbtnIsJudgerClosedListNo.Text = "لا";
+            this.rbtnIsJudgerClosedListNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbtnIsJudgerClosedListYes
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(1, 415);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(40, 17);
-            this.radioButton2.TabIndex = 168;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "نعم";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtnIsJudgerClosedListYes.AutoSize = true;
+            this.rbtnIsJudgerClosedListYes.Location = new System.Drawing.Point(1, 415);
+            this.rbtnIsJudgerClosedListYes.Name = "rbtnIsJudgerClosedListYes";
+            this.rbtnIsJudgerClosedListYes.Size = new System.Drawing.Size(40, 17);
+            this.rbtnIsJudgerClosedListYes.TabIndex = 168;
+            this.rbtnIsJudgerClosedListYes.TabStop = true;
+            this.rbtnIsJudgerClosedListYes.Text = "نعم";
+            this.rbtnIsJudgerClosedListYes.UseVisualStyleBackColor = true;
             // 
             // label22
             // 
@@ -488,43 +488,43 @@
             this.label22.TabIndex = 167;
             this.label22.Text = "القائمة البيضاء ";
             // 
-            // radioButton3
+            // rbtnIsJudgerWhiteListNo
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(150, 360);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(31, 17);
-            this.radioButton3.TabIndex = 166;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "لا";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbtnIsJudgerWhiteListNo.AutoSize = true;
+            this.rbtnIsJudgerWhiteListNo.Location = new System.Drawing.Point(150, 360);
+            this.rbtnIsJudgerWhiteListNo.Name = "rbtnIsJudgerWhiteListNo";
+            this.rbtnIsJudgerWhiteListNo.Size = new System.Drawing.Size(31, 17);
+            this.rbtnIsJudgerWhiteListNo.TabIndex = 166;
+            this.rbtnIsJudgerWhiteListNo.TabStop = true;
+            this.rbtnIsJudgerWhiteListNo.Text = "لا";
+            this.rbtnIsJudgerWhiteListNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rbtnIsJudgerWhiteListYes
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(3, 361);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(40, 17);
-            this.radioButton4.TabIndex = 165;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "نعم";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbtnIsJudgerWhiteListYes.AutoSize = true;
+            this.rbtnIsJudgerWhiteListYes.Location = new System.Drawing.Point(3, 361);
+            this.rbtnIsJudgerWhiteListYes.Name = "rbtnIsJudgerWhiteListYes";
+            this.rbtnIsJudgerWhiteListYes.Size = new System.Drawing.Size(40, 17);
+            this.rbtnIsJudgerWhiteListYes.TabIndex = 165;
+            this.rbtnIsJudgerWhiteListYes.TabStop = true;
+            this.rbtnIsJudgerWhiteListYes.Text = "نعم";
+            this.rbtnIsJudgerWhiteListYes.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dtpJudgerIssueDateTo
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(5, 297);
-            this.dateTimePicker1.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(178, 20);
-            this.dateTimePicker1.TabIndex = 164;
+            this.dtpJudgerIssueDateTo.Location = new System.Drawing.Point(5, 297);
+            this.dtpJudgerIssueDateTo.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+            this.dtpJudgerIssueDateTo.Name = "dtpJudgerIssueDateTo";
+            this.dtpJudgerIssueDateTo.Size = new System.Drawing.Size(178, 20);
+            this.dtpJudgerIssueDateTo.TabIndex = 164;
             // 
-            // dateTimePicker2
+            // dtpJudgerIssueDateFrom
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(5, 242);
-            this.dateTimePicker2.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(178, 20);
-            this.dateTimePicker2.TabIndex = 162;
+            this.dtpJudgerIssueDateFrom.Location = new System.Drawing.Point(5, 242);
+            this.dtpJudgerIssueDateFrom.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+            this.dtpJudgerIssueDateFrom.Name = "dtpJudgerIssueDateFrom";
+            this.dtpJudgerIssueDateFrom.Size = new System.Drawing.Size(178, 20);
+            this.dtpJudgerIssueDateFrom.TabIndex = 162;
             // 
             // label23
             // 
@@ -536,13 +536,13 @@
             this.label23.TabIndex = 163;
             this.label23.Text = "تاريخ الانشاء الى";
             // 
-            // dateTimePicker3
+            // dtpJudgerIssueDate
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(5, 184);
-            this.dateTimePicker3.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(178, 20);
-            this.dateTimePicker3.TabIndex = 161;
+            this.dtpJudgerIssueDate.Location = new System.Drawing.Point(5, 184);
+            this.dtpJudgerIssueDate.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+            this.dtpJudgerIssueDate.Name = "dtpJudgerIssueDate";
+            this.dtpJudgerIssueDate.Size = new System.Drawing.Size(178, 20);
+            this.dtpJudgerIssueDate.TabIndex = 161;
             // 
             // label24
             // 
@@ -574,27 +574,27 @@
             this.label26.TabIndex = 158;
             this.label26.Text = "هل فعال";
             // 
-            // radioButton5
+            // rbtnIsJudgerActiveNo
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(152, 80);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(31, 17);
-            this.radioButton5.TabIndex = 157;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "لا";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rbtnIsJudgerActiveNo.AutoSize = true;
+            this.rbtnIsJudgerActiveNo.Location = new System.Drawing.Point(152, 80);
+            this.rbtnIsJudgerActiveNo.Name = "rbtnIsJudgerActiveNo";
+            this.rbtnIsJudgerActiveNo.Size = new System.Drawing.Size(31, 17);
+            this.rbtnIsJudgerActiveNo.TabIndex = 157;
+            this.rbtnIsJudgerActiveNo.TabStop = true;
+            this.rbtnIsJudgerActiveNo.Text = "لا";
+            this.rbtnIsJudgerActiveNo.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // rbtnIsJudgerActiveYes
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(5, 81);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(40, 17);
-            this.radioButton6.TabIndex = 156;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "نعم";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rbtnIsJudgerActiveYes.AutoSize = true;
+            this.rbtnIsJudgerActiveYes.Location = new System.Drawing.Point(5, 81);
+            this.rbtnIsJudgerActiveYes.Name = "rbtnIsJudgerActiveYes";
+            this.rbtnIsJudgerActiveYes.Size = new System.Drawing.Size(40, 17);
+            this.rbtnIsJudgerActiveYes.TabIndex = 156;
+            this.rbtnIsJudgerActiveYes.TabStop = true;
+            this.rbtnIsJudgerActiveYes.Text = "نعم";
+            this.rbtnIsJudgerActiveYes.UseVisualStyleBackColor = true;
             // 
             // label27
             // 
@@ -606,14 +606,14 @@
             this.label27.TabIndex = 153;
             this.label27.Text = "تم الانشاء من قبل";
             // 
-            // myCustomControlTextBox1
+            // mtbJudgerCreatedByUserName
             // 
-            this.myCustomControlTextBox1.InputType = myControlLibrary.myCustomControlTextBox.InputTypeEnum.NumberInput;
-            this.myCustomControlTextBox1.IsRequired = false;
-            this.myCustomControlTextBox1.Location = new System.Drawing.Point(5, 122);
-            this.myCustomControlTextBox1.Name = "myCustomControlTextBox1";
-            this.myCustomControlTextBox1.Size = new System.Drawing.Size(178, 20);
-            this.myCustomControlTextBox1.TabIndex = 155;
+            this.mtbJudgerCreatedByUserName.InputType = myControlLibrary.myCustomControlTextBox.InputTypeEnum.NumberInput;
+            this.mtbJudgerCreatedByUserName.IsRequired = false;
+            this.mtbJudgerCreatedByUserName.Location = new System.Drawing.Point(5, 122);
+            this.mtbJudgerCreatedByUserName.Name = "mtbJudgerCreatedByUserName";
+            this.mtbJudgerCreatedByUserName.Size = new System.Drawing.Size(178, 20);
+            this.mtbJudgerCreatedByUserName.TabIndex = 155;
             // 
             // groupBox3
             // 
@@ -1364,40 +1364,40 @@
         private System.Windows.Forms.RadioButton rbtnIsRegulatorWhiteListYes;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton rbtnIsExpertClosedListNo;
+        private System.Windows.Forms.RadioButton rbtnIsExpertClosedListYes;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker5;
+        private System.Windows.Forms.RadioButton rbtnIsExpertWhiteListNo;
+        private System.Windows.Forms.RadioButton rbtnIsExpertWhiteListYes;
+        private System.Windows.Forms.DateTimePicker dtpExpertIssueDateTo;
+        private System.Windows.Forms.DateTimePicker dtpExpertIssueDateFrom;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.DateTimePicker dateTimePicker6;
+        private System.Windows.Forms.DateTimePicker dtpExpertIssueDate;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton rbtnIsExpertActiveNo;
+        private System.Windows.Forms.RadioButton rbtnIsExpertActiveYes;
         private System.Windows.Forms.Label label34;
-        private myControlLibrary.myCustomControlTextBox myCustomControlTextBox2;
+        private myControlLibrary.myCustomControlTextBox mtbExpertCreatedByUserName;
         private System.Windows.Forms.GroupBox gbExperts;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rbtnIsJudgerClosedListNo;
+        private System.Windows.Forms.RadioButton rbtnIsJudgerClosedListYes;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.RadioButton rbtnIsJudgerWhiteListNo;
+        private System.Windows.Forms.RadioButton rbtnIsJudgerWhiteListYes;
+        private System.Windows.Forms.DateTimePicker dtpJudgerIssueDateTo;
+        private System.Windows.Forms.DateTimePicker dtpJudgerIssueDateFrom;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dtpJudgerIssueDate;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton rbtnIsJudgerActiveNo;
+        private System.Windows.Forms.RadioButton rbtnIsJudgerActiveYes;
         private System.Windows.Forms.Label label27;
-        private myControlLibrary.myCustomControlTextBox myCustomControlTextBox1;
+        private myControlLibrary.myCustomControlTextBox mtbJudgerCreatedByUserName;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.RadioButton rbtnIsShariaClosedListNo;
         private System.Windows.Forms.RadioButton rbtnIsShariaClosedListYes;
@@ -1427,12 +1427,12 @@
         private System.Windows.Forms.CheckBox cbEnableShariaIssueDate;
         private System.Windows.Forms.CheckBox cbEnableRegulatorToDate;
         private System.Windows.Forms.CheckBox cbEnableRegulatorFromDate;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox cbEnableExpertToDate;
+        private System.Windows.Forms.CheckBox cbEnableExpertFromDate;
+        private System.Windows.Forms.CheckBox cbEnableExpertIssueDate;
+        private System.Windows.Forms.CheckBox cbEnableJudgerToDate;
+        private System.Windows.Forms.CheckBox cbEnableJudgerFromDate;
+        private System.Windows.Forms.CheckBox cbEnableJudgerIssueDate;
         private System.Windows.Forms.Button btnClose;
     }
 }

@@ -77,13 +77,13 @@ namespace AADLDataAccess.Judger
             catch (SqlException ex)
             {
 
-                clsDataAccessSettings.WriteEventToLogFile("Exception from Data Access layer clsShaira class, get info by PractitionerID():\n" + ex.Message,
+                clsDataAccessSettings.WriteEventToLogFile("Exception from Data Access layer clsJudger class, get info by PractitionerID():\n" + ex.Message,
                     EventLogEntryType.Error);
             }
             catch (Exception ex)
             {
 
-                clsDataAccessSettings.WriteEventToLogFile("Exception from Data Access layer clsShaira class, get info by PractitionerID():\n" + ex.Message,
+                clsDataAccessSettings.WriteEventToLogFile("Exception from Data Access layer clsJudger class, get info by PractitionerID():\n" + ex.Message,
                     EventLogEntryType.Error);
 
                 isFound = false;
@@ -158,13 +158,13 @@ namespace AADLDataAccess.Judger
             catch (SqlException ex)
             {
 
-                clsDataAccessSettings.WriteEventToLogFile("Exception from Data Access layer clsShaira class, get info by PractitionerID():\n" + ex.Message,
+                clsDataAccessSettings.WriteEventToLogFile("Exception from Data Access layer clsJudger class, get info by PractitionerID():\n" + ex.Message,
                     EventLogEntryType.Error);
             }
             catch (Exception ex)
             {
 
-                clsDataAccessSettings.WriteEventToLogFile("Exception from Data Access layer clsShaira class, get info by PractitionerID():\n" + ex.Message,
+                clsDataAccessSettings.WriteEventToLogFile("Exception from Data Access layer clsJudger class, get info by PractitionerID():\n" + ex.Message,
                     EventLogEntryType.Error);
 
                 isFound = false;
@@ -239,13 +239,13 @@ namespace AADLDataAccess.Judger
             catch (SqlException ex)
             {
 
-                clsDataAccessSettings.WriteEventToLogFile("Exception from Data Access layer clsShaira class, get info by PractitionerID():\n" + ex.Message,
+                clsDataAccessSettings.WriteEventToLogFile("Exception from Data Access layer              class, get info by PractitionerID():\n" + ex.Message,
                     EventLogEntryType.Error);
             }
             catch (Exception ex)
             {
 
-                clsDataAccessSettings.WriteEventToLogFile("Exception from Data Access layer clsShaira class, get info by PractitionerID():\n" + ex.Message,
+                clsDataAccessSettings.WriteEventToLogFile("Exception from Data Access layer clsJudger class, get info by PractitionerID():\n" + ex.Message,
                     EventLogEntryType.Error);
 
                 isFound = false;
@@ -467,5 +467,7 @@ namespace AADLDataAccess.Judger
 
             return isExist;
         }
+    
     }
+
 }
