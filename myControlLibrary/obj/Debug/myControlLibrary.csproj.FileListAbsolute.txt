@@ -14,3 +14,11 @@ C:\Users\XIGMATEK\source\repos\AADL\My-Github\Aadl_v1\Aadl_v1\myControlLibrary\o
 C:\Users\XIGMATEK\source\repos\AADL\My-Github\Aadl_v1\Aadl_v1\myControlLibrary\obj\Debug\myControlLibrary.csproj.CoreCompileInputs.cache
 C:\Users\XIGMATEK\source\repos\AADL\My-Github\Aadl_v1\Aadl_v1\myControlLibrary\obj\Debug\myControlLibrary.dll
 C:\Users\XIGMATEK\source\repos\AADL\My-Github\Aadl_v1\Aadl_v1\myControlLibrary\obj\Debug\myControlLibrary.pdb
+C:\Users\PC\Desktop\Aadl_v2\myControlLibrary\bin\Debug\myControlLibrary.dll
+C:\Users\PC\Desktop\Aadl_v2\myControlLibrary\bin\Debug\myControlLibrary.pdb
+C:\Users\PC\Desktop\Aadl_v2\myControlLibrary\obj\Debug\myControlLibrary.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\Aadl_v2\myControlLibrary\obj\Debug\myControlLibrary.myCustomMessageBoxFrm.resources
+C:\Users\PC\Desktop\Aadl_v2\myControlLibrary\obj\Debug\myControlLibrary.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\Aadl_v2\myControlLibrary\obj\Debug\myControlLibrary.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Aadl_v2\myControlLibrary\obj\Debug\myControlLibrary.dll
+C:\Users\PC\Desktop\Aadl_v2\myControlLibrary\obj\Debug\myControlLibrary.pdb

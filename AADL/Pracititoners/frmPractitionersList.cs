@@ -1,16 +1,7 @@
 ﻿using AADL.Pracititoners;
 using AADLBusiness;
-using myControlLibrary;
 using System;
-using System.CodeDom;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace AADL.Regulators
@@ -28,15 +19,40 @@ namespace AADL.Regulators
 
         }
 
+        private void _UpdateColumnsWidth()
+        {
+            if (dgvPractitioners.Rows.Count > 0)
+            {
+                dgvPractitioners.Columns[0].Width = 110;
+                dgvPractitioners.Columns[1].Width = 200;
+                dgvPractitioners.Columns[2].Width = 130;
+                dgvPractitioners.Columns[3].Width = 160;
+                dgvPractitioners.Columns[4].Width = 150;
+                dgvPractitioners.Columns[5].Width = 120;
+                dgvPractitioners.Columns[6].Width = 130;
+                dgvPractitioners.Columns[7].Width = 130;
+                dgvPractitioners.Columns[8].Width = 130;
+                dgvPractitioners.Columns[9].Width = 130;
+                dgvPractitioners.Columns[10].Width = 170;
+                dgvPractitioners.Columns[11].Width = 220;
+                dgvPractitioners.Columns[12].Width = 220;
+                dgvPractitioners.Columns[13].Width = 220;
+                dgvPractitioners.Columns[14].Width = 170;
+                dgvPractitioners.Columns[15].Width = 170;
+                dgvPractitioners.Columns[16].Width = 170;
+                dgvPractitioners.Columns[17].Width = 170;
+                dgvPractitioners.Columns[18].Width = 170;
+            }
+        }
+
         private void _LoadDataTableToGridViewControl(DataTable PractitionerDataTable)
         {
-            if(PractitionerDataTable!=null&& PractitionerDataTable.Rows.Count>0)
+            if (PractitionerDataTable != null && PractitionerDataTable.Rows.Count > 0)
             {
 
-                    dgvPractitioners.DataSource = PractitionerDataTable;
-                    dgvPractitioners.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                    cbFilterBy.SelectedIndex = 0;
-
+                dgvPractitioners.DataSource = PractitionerDataTable;
+                cbFilterBy.SelectedIndex = 0;
+                _UpdateColumnsWidth();
             }
             else
             {
@@ -50,7 +66,7 @@ namespace AADL.Regulators
         }
         private void frmPractitionersList_Load(object sender, EventArgs e)
         {
-            _LoadDataTableToGridViewControl (clsPractitionerServices.GetAllPractitionersInfo());
+            _LoadDataTableToGridViewControl(clsPractitionerServices.GetAllPractitionersInfo());
 
         }
 
@@ -317,10 +333,11 @@ namespace AADL.Regulators
             try
             {
 
-            DataTable AdvancedPractitionerQueryDataTable = clsPractitionerServices.Find(PractitionerProperties);
-            _LoadDataTableToGridViewControl(AdvancedPractitionerQueryDataTable);
+                DataTable AdvancedPractitionerQueryDataTable = clsPractitionerServices.Find(PractitionerProperties);
+                _LoadDataTableToGridViewControl(AdvancedPractitionerQueryDataTable);
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
 
                 clsHelperClasses.WriteEventToLogFile("A problem in loading filter data of practitioner by advanced query:\n" +
                     ex.Message, System.Diagnostics.EventLogEntryType.Warning);
